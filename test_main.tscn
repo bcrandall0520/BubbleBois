@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://b84leeh1b3wff"]
+[gd_scene load_steps=4 format=3 uid="uid://basffiwu2jyw1"]
 
-[ext_resource type="PackedScene" uid="uid://b2ggb8u700kab" path="res://components/player/player.tscn" id="1_rmo0b"]
-[ext_resource type="PackedScene" uid="uid://bs8lhrpm3oo4q" path="res://components/platform/water.tscn" id="2_4yiok"]
+[ext_resource type="PackedScene" uid="uid://8st4scqt06l8" path="res://components/player/player.tscn" id="1_rmo0b"]
+[ext_resource type="PackedScene" path="res://components/platform/water.tscn" id="2_4yiok"]
+[ext_resource type="PackedScene" uid="uid://ksq0pe1x05o6" path="res://components/enemy/fly.tscn" id="3_23shv"]
 
 [node name="TestMain" type="Node2D"]
 
@@ -11,3 +12,6 @@ position = Vector2(589, 646)
 [node name="Platform" type="Node2D" parent="."]
 
 [node name="Water" parent="Platform" instance=ExtResource("2_4yiok")]
+
+[node name="Fly" parent="." instance=ExtResource("3_23shv")]
+position = Vector2(1009, 488)
