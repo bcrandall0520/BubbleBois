@@ -5,6 +5,11 @@ const SPEED = 1000.0
 const JUMP_VELOCITY = -1000.0
 const FAST_FALL_VELOCITY = 1000.0
 
+var IN_WATER;
+
+func _ready():
+	var IN_WATER = false
+
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
@@ -22,5 +27,16 @@ func _physics_process(delta: float) -> void:
 		velocity.x = direction * SPEED
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
+		
+	if IN_WATER:
+		velocity.y = velocity.y - 100;
+	else:
+		pass
 
 	move_and_slide()
+	
+func pushup(force: float):
+	IN_WATER = true;
+	
+func leftTheWater():
+	IN_WATER = false;
