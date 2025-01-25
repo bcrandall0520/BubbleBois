@@ -12,7 +12,7 @@ void fragment() {
 
 	vec4 testR = texture(test, UV);
 
-	if (testR.a > 1.94) {
+	if (testR.a < 0.5) {
 		COLOR = offsetScreenRead;
 	}
 	else {
