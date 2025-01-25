@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://b84leeh1b3wff"]
+
+[ext_resource type="PackedScene" uid="uid://b2ggb8u700kab" path="res://components/player/player.tscn" id="1_rmo0b"]
+[ext_resource type="PackedScene" uid="uid://bs8lhrpm3oo4q" path="res://components/platform/water.tscn" id="2_4yiok"]
+
+[node name="TestMain" type="Node2D"]
+
+[node name="Bubble" parent="." instance=ExtResource("1_rmo0b")]
+position = Vector2(589, 646)
+
+[node name="Platform" type="Node2D" parent="."]
+
+[node name="Water" parent="Platform" instance=ExtResource("2_4yiok")]
