@@ -1680,9 +1680,10 @@ node_a = NodePath("..")
 node_b = NodePath("../../SoftBody2D/Bone-5")
 
 [node name="PinJoint2D2" type="PinJoint2D" parent="CharacterBody2D"]
-position = Vector2(111, 0)
+position = Vector2(73, 10)
 node_a = NodePath("..")
-node_b = NodePath("../../SoftBody2D/Bone-36")
+node_b = NodePath("../../SoftBody2D/Bone-19")
+softness = 0.02
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
 position = Vector2(7, 20)
