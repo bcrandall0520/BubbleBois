@@ -1,10 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://b84leeh1b3wff"]
+[gd_scene load_steps=5 format=3 uid="uid://3u1jg47oq7g1"]
 
-[ext_resource type="PackedScene" uid="uid://bqfhkxu3w6yoi" path="res://components/platform/water_rect.tscn" id="1_0vtug"]
+[ext_resource type="PackedScene" uid="uid://dkyy5k123bd1t" path="res://components/platform/water_rect.tscn" id="1_0vtug"]
 [ext_resource type="PackedScene" uid="uid://b2ggb8u700kab" path="res://components/player/player.tscn" id="1_rmo0b"]
-[ext_resource type="PackedScene" uid="uid://bs8lhrpm3oo4q" path="res://components/platform/water.tscn" id="2_4yiok"]
-[ext_resource type="PackedScene" uid="uid://ksq0pe1x05o6" path="res://components/enemy/fly.tscn" id="3_23shv"]
-[ext_resource type="PackedScene" uid="uid://by37765wo3hlp" path="res://components/platform/waterSurface.tscn" id="3_xaq06"]
+[ext_resource type="PackedScene" uid="uid://bu242yxe3prvx" path="res://components/enemy/fly.tscn" id="3_23shv"]
+[ext_resource type="PackedScene" path="res://components/platform/waterSurface.tscn" id="3_xaq06"]
 
 [node name="TestMain" type="Node2D"]
 
@@ -13,14 +12,11 @@
 [node name="WaterRect" parent="Platform" instance=ExtResource("1_0vtug")]
 position = Vector2(1740, 584)
 
-[node name="Water" parent="Platform" instance=ExtResource("2_4yiok")]
-position = Vector2(3492, -648)
-
 [node name="WaterSurface" parent="Platform" instance=ExtResource("3_xaq06")]
 position = Vector2(8, 557)
 
 [node name="Fly" parent="." instance=ExtResource("3_23shv")]
-position = Vector2(1009, 488)
+position = Vector2(1236, 238)
 
 [node name="Bubble" parent="." instance=ExtResource("1_rmo0b")]
 position = Vector2(466, 112)

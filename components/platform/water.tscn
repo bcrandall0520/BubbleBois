@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://bs8lhrpm3oo4q"]
+[gd_scene load_steps=3 format=3 uid="uid://cgan87hw3eacm"]
 
 [ext_resource type="Script" path="res://components/platform/water.gd" id="1_i01ew"]
 [ext_resource type="Texture2D" uid="uid://by3akwnjuhg7g" path="res://assets/backgrounds/water.png" id="2_0rnqp"]

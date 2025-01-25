@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://ksq0pe1x05o6"]
+[gd_scene load_steps=7 format=3 uid="uid://bu242yxe3prvx"]
 
 [ext_resource type="Texture2D" uid="uid://dbtee0bjx312b" path="res://assets/hazards/Giant Fly Sprite Sheet.png" id="1_5sh43"]
 [ext_resource type="Script" path="res://components/enemy/fly.gd" id="2_bvhh4"]
@@ -45,7 +45,8 @@ _data = {
 
 [node name="Fly" type="Sprite2D"]
 texture_filter = 1
-scale = Vector2(5, 5)
+position = Vector2(307, 307)
+scale = Vector2(24.1875, 24.1875)
 texture = ExtResource("1_5sh43")
 flip_h = true
 hframes = 6
@@ -59,7 +60,6 @@ libraries = {
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2(-0.4, 0.4)
-scale = Vector2(1, 1)
 collision_layer = 3
 collision_mask = 3
 
@@ -67,5 +67,4 @@ collision_mask = 3
 light_mask = 3
 visibility_layer = 3
 position = Vector2(-2.98023e-08, 2.98023e-08)
-scale = Vector2(1, 1)
 shape = SubResource("CircleShape2D_nbhhs")
