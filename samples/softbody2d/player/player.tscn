@@ -1,10 +1,10 @@
-[gd_scene load_steps=33 format=3 uid="uid://b2ggb8u700kab"]
+[gd_scene load_steps=32 format=3 uid="uid://b2ggb8u700kab"]
 
 [ext_resource type="Texture2D" uid="uid://b67gk2phgku4" path="res://assets/bubble/bubble.png" id="1_m8vqy"]
 [ext_resource type="Shader" path="res://assets/bubble/bubble.gdshader" id="1_no5uk"]
 [ext_resource type="Texture2D" uid="uid://b2inpyxquoxsv" path="res://assets/bubble/bubbleNormalMap.png" id="2_42af1"]
 [ext_resource type="Script" path="res://addons/softbody2d/softbody2d.gd" id="2_sqj5y"]
-[ext_resource type="Script" path="res://samples/softbody2d/attach-to-character-controller/character_body_2d.gd" id="3_ksp00"]
+[ext_resource type="Script" path="res://samples/softbody2d/player/character_body_2d.gd" id="3_ksp00"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_g7h2g"]
 normal_texture = ExtResource("2_42af1")
@@ -191,8 +191,6 @@ modifications/20 = SubResource("SkeletonModification2DLookAt_15u33")
 resource_local_to_scene = true
 size = Vector2(46.5938, 46.5938)
 
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_bg7a1"]
-
 [sub_resource type="CircleShape2D" id="CircleShape2D_kephs"]
 radius = 100.02
 
@@ -259,7 +257,6 @@ metadata/_local_pose_override_enabled_ = true
 [node name="Bone-3" type="Bone2D" parent="SoftBody2D/Skeleton2D"]
 position = Vector2(8.6867, 2.87357)
 rotation = 2.34509
-scale = Vector2(1, 1)
 rest = Transform2D(-0.699212, 0.714915, -0.714915, -0.699212, 8.6867, 2.87357)
 auto_calculate_length_and_angle = false
 length = 8.0
@@ -286,6 +283,7 @@ metadata/_local_pose_override_enabled_ = true
 [node name="Bone-5" type="Bone2D" parent="SoftBody2D/Skeleton2D"]
 position = Vector2(9, 16)
 rotation = 1.61094
+scale = Vector2(1, 1)
 rest = Transform2D(-0.0401292, 0.999195, -0.999195, -0.0401292, 9, 16)
 auto_calculate_length_and_angle = false
 length = 8.0
@@ -299,7 +297,6 @@ metadata/_local_pose_override_enabled_ = true
 [node name="Bone-6" type="Bone2D" parent="SoftBody2D/Skeleton2D"]
 position = Vector2(8.70711, 23.2929)
 rotation = 1.55797
-scale = Vector2(1, 1)
 rest = Transform2D(0.012829, 0.999918, -0.999918, 0.012829, 8.70711, 23.2929)
 auto_calculate_length_and_angle = false
 length = 8.0
@@ -327,6 +324,7 @@ metadata/_local_pose_override_enabled_ = true
 [node name="Bone-8" type="Bone2D" parent="SoftBody2D/Skeleton2D"]
 position = Vector2(16, 3)
 rotation = 2.47758
+scale = Vector2(1, 1)
 rest = Transform2D(-0.787525, 0.616283, -0.616283, -0.787525, 16, 3)
 auto_calculate_length_and_angle = false
 length = 8.0
@@ -379,6 +377,7 @@ metadata/_local_pose_override_enabled_ = true
 [node name="Bone-12" type="Bone2D" parent="SoftBody2D/Skeleton2D"]
 position = Vector2(16, 29)
 rotation = -2.47758
+scale = Vector2(1, 1)
 rest = Transform2D(-0.787525, -0.616283, 0.616283, -0.787525, 16, 29)
 auto_calculate_length_and_angle = false
 length = 8.0
@@ -392,7 +391,6 @@ metadata/_local_pose_override_enabled_ = true
 [node name="Bone-13" type="Bone2D" parent="SoftBody2D/Skeleton2D"]
 position = Vector2(23.1864, 2.8771)
 rotation = 1.55252
-scale = Vector2(1, 1)
 rest = Transform2D(0.0182712, 0.999833, -0.999833, 0.0182712, 23.1864, 2.8771)
 auto_calculate_length_and_angle = false
 length = 8.0
@@ -406,7 +404,6 @@ metadata/_local_pose_override_enabled_ = true
 [node name="Bone-14" type="Bone2D" parent="SoftBody2D/Skeleton2D"]
 position = Vector2(23.2929, 8.70711)
 rotation = -1.58907
-scale = Vector2(1, 1)
 rest = Transform2D(-0.0182712, -0.999833, 0.999833, -0.0182712, 23.2929, 8.70711)
 auto_calculate_length_and_angle = false
 length = 8.0
@@ -446,6 +443,7 @@ metadata/_local_pose_override_enabled_ = true
 [node name="Bone-17" type="Bone2D" parent="SoftBody2D/Skeleton2D"]
 position = Vector2(23.2657, 29.1251)
 rotation = -0.805855
+scale = Vector2(1, 1)
 rest = Transform2D(0.692495, -0.721423, 0.721423, 0.692495, 23.2657, 29.1251)
 auto_calculate_length_and_angle = false
 length = 8.0
@@ -459,7 +457,6 @@ metadata/_local_pose_override_enabled_ = true
 [node name="Bone-18" type="Bone2D" parent="SoftBody2D/Skeleton2D"]
 position = Vector2(29.1264, 8.6867)
 rotation = -2.3673
-scale = Vector2(1, 1)
 rest = Transform2D(-0.714915, -0.699212, 0.699212, -0.714915, 29.1264, 8.6867)
 auto_calculate_length_and_angle = false
 length = 8.0
@@ -1667,14 +1664,6 @@ rotation = -3.85794
 node_a = NodePath("..")
 node_b = NodePath("../../Bone-15")
 softness = 60.0
-
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-position = Vector2(-33, 391)
-collision_layer = 3
-collision_mask = 3
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-shape = SubResource("WorldBoundaryShape2D_bg7a1")
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 position = Vector2(5, -16)
