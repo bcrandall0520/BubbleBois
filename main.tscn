@@ -9,8 +9,8 @@
 [ext_resource type="Texture2D" uid="uid://bjqboxowe07lw" path="res://assets/items/crystal.png" id="6_kpi5m"]
 [ext_resource type="PackedScene" uid="uid://jt80gv02u4f2" path="res://hud.tscn" id="6_mp7wy"]
 [ext_resource type="PackedScene" uid="uid://dk0xon0k7ga23" path="res://components/enemy/enemy.tscn" id="9_l6smt"]
-[ext_resource type="PackedScene" uid="uid://chhnrbkrbyki8" path="res://samples/softbody2d/attach-to-character-controller/attach.tscn" id="12_3jbjq"]
 [ext_resource type="PackedScene" uid="uid://beuisy5yrw0bq" path="res://components/flag/flag.tscn" id="12_dkbog"]
+[ext_resource type="PackedScene" uid="uid://b2ggb8u700kab" path="res://components/player/player.tscn" id="12_iluye"]
 [ext_resource type="Script" path="res://scripts/multiplayer_camera.gd" id="13_0d2mj"]
 
 [node name="Main" type="Node2D"]
@@ -218,5 +218,5 @@ limit_bottom = 1080
 position_smoothing_enabled = true
 script = ExtResource("13_0d2mj")
 
-[node name="Player" parent="." instance=ExtResource("12_3jbjq")]
-position = Vector2(550, 331)
+[node name="Egg" parent="." instance=ExtResource("12_iluye")]
+position = Vector2(940, 303)
