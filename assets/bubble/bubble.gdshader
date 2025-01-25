@@ -14,6 +14,7 @@ void fragment() {
 
 	if (testR.a < 0.5) {
 		COLOR = offsetScreenRead;
+		COLOR.a = .9;
 	}
 	else {
 		COLOR = textureRead;

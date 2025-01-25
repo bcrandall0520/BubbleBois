@@ -2,14 +2,14 @@
 
 [ext_resource type="Texture2D" uid="uid://b67gk2phgku4" path="res://assets/bubble/bubble.png" id="1_m8vqy"]
 [ext_resource type="Shader" path="res://assets/bubble/bubble.gdshader" id="1_no5uk"]
-[ext_resource type="Texture2D" uid="uid://c0jjvkownk2oi" path="res://assets/bubble/bubbleAlpha.png" id="2_4weos"]
+[ext_resource type="Texture2D" uid="uid://bttyutts1bnuo" path="res://assets/bubble/bubbleAlpha2.png" id="2_rpnef"]
 [ext_resource type="Script" path="res://addons/softbody2d/softbody2d.gd" id="2_sqj5y"]
 [ext_resource type="Script" path="res://components/player/character_body_2d.gd" id="3_ksp00"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ukdvx"]
 shader = ExtResource("1_no5uk")
 shader_parameter/refractionMagnitude = 30.0
-shader_parameter/test = ExtResource("2_4weos")
+shader_parameter/test = ExtResource("2_rpnef")
 
 [sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_t3j7n"]
 resource_local_to_scene = true
