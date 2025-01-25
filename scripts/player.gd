@@ -161,8 +161,8 @@ func _get_player_axis(action_a, action_b):
 
 func _physics_process(delta):
 	# Don't move if there are no lives left.
-	if Global.lives <= 0:
-		return
+	#if Global.lives <= 0:
+		#return
 
 	# Handle jump
 	if is_on_floor():

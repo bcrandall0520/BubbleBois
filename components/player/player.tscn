@@ -6,6 +6,7 @@
 [ext_resource type="Script" path="res://addons/softbody2d/softbody2d.gd" id="2_sqj5y"]
 [ext_resource type="Script" path="res://components/player/character_body_2d.gd" id="3_ksp00"]
 
+
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ukdvx"]
 shader = ExtResource("1_no5uk")
 shader_parameter/refractionMagnitude = 30.0
