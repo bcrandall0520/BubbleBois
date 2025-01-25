@@ -324,7 +324,6 @@ metadata/_local_pose_override_enabled_ = true
 [node name="Bone-8" type="Bone2D" parent="SoftBody2D/Skeleton2D"]
 position = Vector2(16, 3)
 rotation = 2.47758
-scale = Vector2(1, 1)
 rest = Transform2D(-0.787525, 0.616283, -0.616283, -0.787525, 16, 3)
 auto_calculate_length_and_angle = false
 length = 8.0
@@ -377,7 +376,6 @@ metadata/_local_pose_override_enabled_ = true
 [node name="Bone-12" type="Bone2D" parent="SoftBody2D/Skeleton2D"]
 position = Vector2(16, 29)
 rotation = -2.47758
-scale = Vector2(1, 1)
 rest = Transform2D(-0.787525, -0.616283, 0.616283, -0.787525, 16, 29)
 auto_calculate_length_and_angle = false
 length = 8.0
@@ -443,7 +441,6 @@ metadata/_local_pose_override_enabled_ = true
 [node name="Bone-17" type="Bone2D" parent="SoftBody2D/Skeleton2D"]
 position = Vector2(23.2657, 29.1251)
 rotation = -0.805855
-scale = Vector2(1, 1)
 rest = Transform2D(0.692495, -0.721423, 0.721423, 0.692495, 23.2657, 29.1251)
 auto_calculate_length_and_angle = false
 length = 8.0
@@ -1666,7 +1663,7 @@ node_b = NodePath("../../Bone-15")
 softness = 60.0
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
-position = Vector2(5, -16)
+position = Vector2(2, -5)
 collision_layer = 2
 collision_mask = 2
 script = ExtResource("3_ksp00")
@@ -1674,16 +1671,26 @@ script = ExtResource("3_ksp00")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
 shape = SubResource("CircleShape2D_kephs")
 
-[node name="PinJoint2D" type="PinJoint2D" parent="CharacterBody2D"]
-position = Vector2(-97, 1)
+[node name="LeftJoint" type="PinJoint2D" parent="CharacterBody2D"]
+position = Vector2(-90, -4)
 node_a = NodePath("..")
 node_b = NodePath("../../SoftBody2D/Bone-5")
 
-[node name="PinJoint2D2" type="PinJoint2D" parent="CharacterBody2D"]
-position = Vector2(73, 10)
+[node name="RightJoint" type="PinJoint2D" parent="CharacterBody2D"]
+position = Vector2(86, -1)
 node_a = NodePath("..")
 node_b = NodePath("../../SoftBody2D/Bone-19")
 softness = 0.02
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
 position = Vector2(7, 20)
+
+[node name="TopSpringJoint" type="DampedSpringJoint2D" parent="CharacterBody2D"]
+position = Vector2(-3, -91)
+node_a = NodePath("..")
+node_b = NodePath("../../SoftBody2D/Bone-8")
+
+[node name="BottomJoint" type="PinJoint2D" parent="CharacterBody2D"]
+position = Vector2(-5, 100)
+node_a = NodePath("..")
+node_b = NodePath("../../SoftBody2D/Bone-12")
