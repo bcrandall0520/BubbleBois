@@ -4,16 +4,16 @@ uniform float refractionMagnitude = 30.0;
 uniform sampler2D test;
 
 void fragment() {
-	
+
 	vec3 refraction = - texture(NORMAL_TEXTURE, UV).rgb * vec3(	1.0, -1.0, 1.0);
-	
+
 	vec4 textureRead = texture(TEXTURE, UV);
 	vec4 offsetScreenRead = textureLod(SCREEN_TEXTURE, SCREEN_UV + refraction.rg/refractionMagnitude, 0.0);
-	
+
 	vec4 testR = texture(test, UV);
-	
+
 	if (testR.a > 1.94) {
-		COLOR = offsetScreenRead;	
+		COLOR = offsetScreenRead;
 	}
 	else {
 		COLOR = textureRead;

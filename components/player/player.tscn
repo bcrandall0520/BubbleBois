@@ -4,7 +4,7 @@
 [ext_resource type="Shader" path="res://assets/bubble/bubble.gdshader" id="1_no5uk"]
 [ext_resource type="Texture2D" uid="uid://b2inpyxquoxsv" path="res://assets/bubble/bubbleNormalMap.png" id="2_42af1"]
 [ext_resource type="Script" path="res://addons/softbody2d/softbody2d.gd" id="2_sqj5y"]
-[ext_resource type="Script" path="res://samples/softbody2d/player/character_body_2d.gd" id="3_ksp00"]
+[ext_resource type="Script" path="res://components/player/character_body_2d.gd" id="3_ksp00"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_g7h2g"]
 normal_texture = ExtResource("2_42af1")
