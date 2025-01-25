@@ -19,8 +19,8 @@ position = Vector2(3492, -648)
 [node name="WaterSurface" parent="Platform" instance=ExtResource("3_xaq06")]
 position = Vector2(8, 557)
 
-[node name="Bubble" parent="." instance=ExtResource("1_rmo0b")]
-position = Vector2(466, 112)
-
 [node name="Fly" parent="." instance=ExtResource("3_23shv")]
 position = Vector2(1009, 488)
+
+[node name="Bubble" parent="." instance=ExtResource("1_rmo0b")]
+position = Vector2(466, 112)
