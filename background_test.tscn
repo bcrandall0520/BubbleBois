@@ -1,0 +1,83 @@
+[gd_scene load_steps=7 format=3 uid="uid://h0an38vpao5m"]
+
+[ext_resource type="Script" path="res://scripts/player.gd" id="1_rhwwl"]
+[ext_resource type="SpriteFrames" uid="uid://bo581k1esb50n" path="res://components/player/spriteframes-red.tres" id="2_jno0c"]
+[ext_resource type="Texture2D" uid="uid://bsw1xdjjqjkw" path="res://images/test/furthest_background.png" id="3_5uy5b"]
+[ext_resource type="Texture2D" uid="uid://tyhjja6w47a8" path="res://images/test/middle_ground.png" id="4_mhske"]
+[ext_resource type="PackedScene" path="res://components/platform/ice_cube.tscn" id="5_txekq"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_chduw"]
+radius = 31.0
+height = 92.0
+
+[node name="Node2D" type="Node2D"]
+position = Vector2(850, -21)
+
+[node name="Player" type="CharacterBody2D" parent="."]
+position = Vector2(-596, 639)
+script = ExtResource("1_rhwwl")
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+position = Vector2(702, -77)
+
+[node name="DoubleJumpParticles" type="CPUParticles2D" parent="Player"]
+unique_name_in_owner = true
+emitting = false
+amount = 60
+lifetime = 0.2
+one_shot = true
+explosiveness = 0.54
+randomness = 0.25
+emission_shape = 1
+emission_sphere_radius = 36.72
+particle_flag_align_y = true
+gravity = Vector2(0, 1)
+scale_amount_max = 5.0
+color = Color(1, 1, 0, 1)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player"]
+unique_name_in_owner = true
+position = Vector2(0, -64)
+sprite_frames = ExtResource("2_jno0c")
+animation = &"all"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+position = Vector2(0, -46)
+shape = SubResource("CapsuleShape2D_chduw")
+one_way_collision = true
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="Layer1" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(810, -22)
+motion_scale = Vector2(0.6, 0.6)
+motion_mirroring = Vector2(4600, 0)
+
+[node name="FurthestBackground" type="Sprite2D" parent="ParallaxBackground/Layer1"]
+position = Vector2(1439, 562)
+scale = Vector2(0.9208, 0.6105)
+texture = ExtResource("3_5uy5b")
+
+[node name="Layer2" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(810, -22)
+motion_mirroring = Vector2(4600, 0)
+
+[node name="MiddleBackground" type="Sprite2D" parent="ParallaxBackground/Layer2"]
+position = Vector2(1443, 554)
+scale = Vector2(0.9208, 0.6105)
+texture = ExtResource("4_mhske")
+
+[node name="Cube" parent="." instance=ExtResource("5_txekq")]
+position = Vector2(-679, 939)
+
+[node name="Cube2" parent="." instance=ExtResource("5_txekq")]
+position = Vector2(-438, 938)
+rotation = -0.506922
+
+[node name="Cube3" parent="." instance=ExtResource("5_txekq")]
+position = Vector2(-277, 937)
+rotation = 0.360032
+
+[node name="Cube4" parent="." instance=ExtResource("5_txekq")]
+position = Vector2(1376, 761)
+scale = Vector2(122.081, -0.70337)

@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://c2jakao50tiw7"]
+
+[ext_resource type="Texture2D" uid="uid://d0ojpiiky6l2n" path="res://images/test/ice_cube.png" id="1_a3dw4"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Cube" type="CharacterBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Cube"]
+position = Vector2(14.3685, -56.6216)
+scale = Vector2(1.03758, 1.01892)
+polygon = PackedVector2Array(-73, -29, -51, -55, 80, -56, 79.6386, 41.8301, 51.689, 55.5701, -72.6386, 54.5887)
+
+[node name="Sprite2D" type="Sprite2D" parent="Cube"]
+position = Vector2(289, -78)
+scale = Vector2(0.2143, 0.22)
+texture = ExtResource("1_a3dw4")
