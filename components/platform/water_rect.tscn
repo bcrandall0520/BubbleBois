@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://bqfhkxu3w6yoi"]
+
+[ext_resource type="Script" path="res://components/platform/water.gd" id="1_3qjpx"]
+[ext_resource type="Texture2D" uid="uid://by3akwnjuhg7g" path="res://assets/backgrounds/water.png" id="2_phfrq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sc7h1"]
+size = Vector2(3506, 1269)
+
+[node name="WaterRect" type="Node2D"]
+script = ExtResource("1_3qjpx")
+
+[node name="WaterArea" type="Area2D" parent="."]
+unique_name_in_owner = true
+collision_layer = 2
+collision_mask = 2
+
+[node name="WaterPng" type="Sprite2D" parent="WaterArea"]
+texture = ExtResource("2_phfrq")
+
+[node name="WaterCollision" type="CollisionShape2D" parent="WaterArea"]
+position = Vector2(1, 603.5)
+shape = SubResource("RectangleShape2D_sc7h1")
+
+[connection signal="body_entered" from="WaterArea" to="." method="_on_water_area_body_entered"]
+[connection signal="body_exited" from="WaterArea" to="." method="_on_water_area_body_exited"]
