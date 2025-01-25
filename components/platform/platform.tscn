@@ -40,6 +40,8 @@ mass = 1000.0
 freeze = true
 
 [node name="Area2D" type="Area2D" parent="RigidBody2D"]
+collision_layer = 3
+collision_mask = 3
 
 [node name="AreaCollisionShape2D" type="CollisionShape2D" parent="RigidBody2D/Area2D"]
 unique_name_in_owner = true
