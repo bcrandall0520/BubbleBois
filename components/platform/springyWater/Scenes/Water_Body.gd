@@ -171,8 +171,8 @@ func splash(index, speed):
 
 func _on_Water_Body_Area_body_entered(body):
 	#body.in_water()
-	if body.is_in_group("players"):
-		body.call("pushup", 2);
+	#if body.is_in_group("players"):
+	#	body.call("pushup", 2);
 	#creates a instace of the particle system
 	var s = splash_particle.instantiate()
 	

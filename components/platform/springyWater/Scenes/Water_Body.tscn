@@ -12,6 +12,7 @@ shader_parameter/tint = Color(0.439216, 0.894118, 1, 1)
 
 [node name="Water_Body" type="Node2D"]
 script = ExtResource("2")
+depth = 200
 
 [node name="Water_Polygon" type="Polygon2D" parent="."]
 light_mask = 2
