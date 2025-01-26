@@ -1,6 +1,6 @@
-[gd_scene load_steps=8 format=3 uid="uid://3u1jg47oq7g1"]
+[gd_scene load_steps=9 format=3 uid="uid://3u1jg47oq7g1"]
 
-[ext_resource type="PackedScene" uid="uid://dkyy5k123bd1t" path="res://components/platform/water_rect.tscn" id="1_0vtug"]
+[ext_resource type="PackedScene" path="res://components/platform/water_rect.tscn" id="1_0vtug"]
 [ext_resource type="PackedScene" uid="uid://b2ggb8u700kab" path="res://components/player/player.tscn" id="1_rmo0b"]
 [ext_resource type="PackedScene" uid="uid://bu242yxe3prvx" path="res://components/enemy/fly.tscn" id="3_23shv"]
 [ext_resource type="PackedScene" uid="uid://cq8xoorso41bd" path="res://components/enemy/ship.tscn" id="3_jibpa"]
@@ -58,3 +58,6 @@ position = Vector2(2231, 825)
 [node name="Ship" parent="." instance=ExtResource("3_jibpa")]
 position = Vector2(8389, 405)
 scale = Vector2(5, 5)
+
+[node name="Bottle" parent="." instance=ExtResource("8_1ks1f")]
+position = Vector2(-16613, 541)
