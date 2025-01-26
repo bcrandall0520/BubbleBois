@@ -46,7 +46,6 @@ func _physics_process(delta: float) -> void:
 		
 	var waterLoc = int(position.x - 1000) / 9900;
 	
-	print(waterLoc)
 	for i in range(3):
 		get_parent().get_parent().get_child(3).get_child(i).position = Vector2(-1000 + 9900 * (waterLoc + i -1), 0)
 	if waterLoc==0:
