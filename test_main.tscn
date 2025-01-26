@@ -3,11 +3,10 @@
 [ext_resource type="PackedScene" path="res://components/platform/water_rect.tscn" id="1_0vtug"]
 [ext_resource type="PackedScene" uid="uid://b2ggb8u700kab" path="res://components/player/player.tscn" id="1_rmo0b"]
 [ext_resource type="PackedScene" uid="uid://bu242yxe3prvx" path="res://components/enemy/fly.tscn" id="3_23shv"]
-[ext_resource type="PackedScene" path="res://components/enemy/ship.tscn" id="3_jibpa"]
+[ext_resource type="PackedScene" uid="uid://cq8xoorso41bd" path="res://components/enemy/ship.tscn" id="3_jibpa"]
 [ext_resource type="PackedScene" uid="uid://baqkr44x8c7kf" path="res://components/platform/springyWater/Scenes/Water_Body.tscn" id="3_tk0fa"]
-[ext_resource type="PackedScene" path="res://components/platform/waterSurface.tscn" id="3_xaq06"]
-[ext_resource type="PackedScene" path="res://components/enemy/Fish.tscn" id="5_ae3ty"]
-[ext_resource type="PackedScene" uid="uid://dtcv8rtyjrq4d" path="res://bottle.tscn" id="8_1ks1f"]
+[ext_resource type="PackedScene" uid="uid://cmak5xaapxgrf" path="res://components/platform/waterSurface.tscn" id="3_xaq06"]
+[ext_resource type="PackedScene" uid="uid://ca1rlinjos0y7" path="res://components/enemy/Fish.tscn" id="5_ae3ty"]
 
 [node name="TestMain" type="Node2D"]
 
@@ -23,6 +22,7 @@ position = Vector2(8, 557)
 
 [node name="Water_Body" parent="Platform" instance=ExtResource("3_tk0fa")]
 position = Vector2(19, 603)
+spring_number = 180
 
 [node name="Platform2" type="Node2D" parent="."]
 position = Vector2(11313, -33)
