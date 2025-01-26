@@ -63,7 +63,7 @@ position = Vector2(-64.8269, 25.0543)
 rotation = -0.708887
 rotates = false
 
-[node name="Fly" type="Sprite2D" parent="Path2D/PathFollow2D"]
+[node name="FlySprite" type="Sprite2D" parent="Path2D/PathFollow2D"]
 texture_filter = 1
 position = Vector2(0.874268, 0.695297)
 rotation = 0.708887
@@ -72,22 +72,22 @@ flip_h = true
 hframes = 6
 vframes = 5
 
-[node name="FlyAnimation" type="AnimationPlayer" parent="Path2D/PathFollow2D/Fly"]
+[node name="FlyAnimation" type="AnimationPlayer" parent="Path2D/PathFollow2D/FlySprite"]
 unique_name_in_owner = true
 libraries = {
 "": SubResource("AnimationLibrary_kgyae")
 }
 
-[node name="FlyHitbox" type="Area2D" parent="Path2D/PathFollow2D/Fly"]
+[node name="FlyHitbox" type="Area2D" parent="Path2D/PathFollow2D/FlySprite"]
 position = Vector2(-0.4, 0.4)
 collision_layer = 2
 collision_mask = 2
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Path2D/PathFollow2D/Fly/FlyHitbox"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Path2D/PathFollow2D/FlySprite/FlyHitbox"]
 light_mask = 3
 visibility_layer = 3
 position = Vector2(-2.98023e-08, 2.98023e-08)
 shape = SubResource("CircleShape2D_nbhhs")
 
-[connection signal="body_entered" from="Path2D/PathFollow2D/Fly/FlyHitbox" to="." method="_on_fly_hitbox_body_entered"]
-[connection signal="body_entered" from="Path2D/PathFollow2D/Fly/FlyHitbox" to="Path2D/PathFollow2D/Fly" method="_on_fly_hitbox_body_entered"]
+[connection signal="body_entered" from="Path2D/PathFollow2D/FlySprite/FlyHitbox" to="." method="_on_fly_hitbox_body_entered"]
+[connection signal="body_entered" from="Path2D/PathFollow2D/FlySprite/FlyHitbox" to="Path2D/PathFollow2D/FlySprite" method="_on_fly_hitbox_body_entered"]

@@ -42,10 +42,10 @@ z_index = 1
 position = Vector2(-5649.5, 1079)
 
 [node name="Fly" parent="." instance=ExtResource("3_23shv")]
-position = Vector2(4200, 317)
+position = Vector2(3578, -572)
 
 [node name="Fish" parent="." instance=ExtResource("5_ae3ty")]
-position = Vector2(4229, 3445)
+position = Vector2(6324, 1616)
 scale = Vector2(3, 3)
 
 [node name="Ship" parent="." instance=ExtResource("3_jibpa")]

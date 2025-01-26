@@ -12,3 +12,7 @@ func _on_ship_hitbox_body_entered(body: Node2D) -> void:
 
 func _process(delta: float) -> void:
 	$Path2D/PathFollow2D.progress_ratio += delta * speed
+	if $Path2D/PathFollow2D.progress_ratio > 0.5:
+		$Path2D/PathFollow2D/ShipSprite.flip_h = true
+	else:
+		$Path2D/PathFollow2D/ShipSprite.flip_h = false

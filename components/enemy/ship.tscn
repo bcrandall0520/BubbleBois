@@ -66,9 +66,8 @@ script = ExtResource("1_xt2km")
 curve = SubResource("Curve2D_3lvb0")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
-position = Vector2(5, 20)
+position = Vector2(-1, 14)
 rotation = -0.00377832
-progress = 4760.53
 rotates = false
 
 [node name="ShipSprite" type="Sprite2D" parent="Path2D/PathFollow2D"]
