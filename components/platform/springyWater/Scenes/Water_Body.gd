@@ -185,5 +185,6 @@ func _on_Water_Body_Area_body_entered(body):
 	pass # Replace with function body.
 
 func _on_water_body_area_body_exited(body: Node2D) -> void:
-	if body.is_in_group("players"):
-		body.call("leftTheWater");
+	#if body.is_in_group("players"):
+#		body.call("leftTheWater");
+	pass

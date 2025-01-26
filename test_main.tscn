@@ -7,15 +7,20 @@
 [ext_resource type="PackedScene" uid="uid://baqkr44x8c7kf" path="res://components/platform/springyWater/Scenes/Water_Body.tscn" id="3_tk0fa"]
 [ext_resource type="PackedScene" uid="uid://cmak5xaapxgrf" path="res://components/platform/waterSurface.tscn" id="3_xaq06"]
 [ext_resource type="PackedScene" uid="uid://ca1rlinjos0y7" path="res://components/enemy/Fish.tscn" id="5_ae3ty"]
-[ext_resource type="PackedScene" uid="uid://dtcv8rtyjrq4d" path="res://bottle.tscn" id="8_1n1he"]
+[ext_resource type="PackedScene" uid="uid://cow7nrqmkvy6s" path="res://bottle.tscn" id="8_1n1he"]
 
 [node name="TestMain" type="Node2D"]
+
+[node name="Bottle" parent="." instance=ExtResource("8_1n1he")]
+position = Vector2(60566, -636)
+rotation = 3.14159
 
 [node name="Platform" type="Node2D" parent="."]
 scale = Vector2(2, 2)
 
 [node name="WaterRect" parent="Platform" instance=ExtResource("1_0vtug")]
-position = Vector2(1738, 555.5)
+position = Vector2(4747, 134)
+scale = Vector2(3, 3)
 
 [node name="WaterSurface" parent="Platform" instance=ExtResource("3_xaq06")]
 visible = false
@@ -26,8 +31,8 @@ position = Vector2(11313, -33)
 scale = Vector2(-2, 2)
 
 [node name="WaterRect" parent="Platform2" instance=ExtResource("1_0vtug")]
-position = Vector2(402, 635.5)
-scale = Vector2(1, 1.01353)
+position = Vector2(-9507.5, 144.5)
+scale = Vector2(2.959, 3)
 
 [node name="Platform3" type="Node2D" parent="."]
 z_index = 3
@@ -35,25 +40,56 @@ position = Vector2(11337, -23)
 scale = Vector2(2, 2)
 
 [node name="WaterRect" parent="Platform3" instance=ExtResource("1_0vtug")]
-position = Vector2(3058.5, 643.5)
+position = Vector2(18188, 80.5)
+scale = Vector2(2, 1.5)
 
-[node name="Water_Body" parent="Platform3" instance=ExtResource("3_tk0fa")]
+[node name="PlatformWater" type="Node2D" parent="."]
+
+[node name="Water_Body" parent="PlatformWater" instance=ExtResource("3_tk0fa")]
 z_index = 1
-position = Vector2(-5649.5, 1079)
+position = Vector2(-1000, 0)
+scale = Vector2(2, 2)
+
+[node name="Water_Body2" parent="PlatformWater" instance=ExtResource("3_tk0fa")]
+z_index = 1
+position = Vector2(8900, 0)
+scale = Vector2(2, 2)
+
+[node name="Water_Body3" parent="PlatformWater" instance=ExtResource("3_tk0fa")]
+visible = false
+z_index = 1
+position = Vector2(18800, 0)
+scale = Vector2(4, 4)
+
+[node name="Water_Body4" parent="PlatformWater" instance=ExtResource("3_tk0fa")]
+visible = false
+z_index = 1
+position = Vector2(28700, 0)
+scale = Vector2(16, 16)
+
+[node name="Water_Body5" parent="PlatformWater" instance=ExtResource("3_tk0fa")]
+visible = false
+z_index = 1
+position = Vector2(38600, 0)
+scale = Vector2(32, 32)
+
+[node name="Water_Body6" parent="PlatformWater" instance=ExtResource("3_tk0fa")]
+visible = false
+z_index = 1
+position = Vector2(48500, 0)
+scale = Vector2(64, 64)
 
 [node name="Fly" parent="." instance=ExtResource("3_23shv")]
-position = Vector2(4200, 317)
+position = Vector2(3578, -572)
 
 [node name="Fish" parent="." instance=ExtResource("5_ae3ty")]
-position = Vector2(4229, 3445)
+position = Vector2(6324, 1616)
 scale = Vector2(3, 3)
 
 [node name="Ship" parent="." instance=ExtResource("3_jibpa")]
-position = Vector2(8389, 405)
+position = Vector2(8592, -401)
 scale = Vector2(5, 5)
 
 [node name="Bubble" parent="." instance=ExtResource("1_rmo0b")]
 z_index = 5
-position = Vector2(2231, 825)
-
-[node name="Node2D" parent="." instance=ExtResource("8_1n1he")]
+position = Vector2(283, -1616)

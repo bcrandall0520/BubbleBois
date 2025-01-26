@@ -30,6 +30,7 @@ func _physics_process(delta: float) -> void:
 			velocity -= get_gravity() * delta * 4
 		velocity.y -= velocity.y * delta * 0.7
 		fastfalling = false
+		
 	
 
 	# Handle jump.
