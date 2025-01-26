@@ -63,10 +63,6 @@ scale = Vector2(4, 4)
 [node name="Fly" parent="." instance=ExtResource("3_23shv")]
 position = Vector2(3170, -3894)
 
-[node name="Fish" parent="." instance=ExtResource("5_ae3ty")]
-position = Vector2(16153, 2671)
-scale = Vector2(3, 3)
-
 [node name="Ship" parent="." instance=ExtResource("3_jibpa")]
 position = Vector2(13552, -497)
 scale = Vector2(5, 5)
@@ -123,16 +119,20 @@ position = Vector2(44410, -510)
 scale = Vector2(5, 5)
 
 [node name="Fish2" parent="." instance=ExtResource("5_ae3ty")]
-position = Vector2(10448, 4372)
+position = Vector2(10448, 1843)
 rotation = 0.211185
 scale = Vector2(-3, 3)
+
+[node name="Fish" parent="." instance=ExtResource("5_ae3ty")]
+position = Vector2(14160, 1644)
+scale = Vector2(3, 3)
 
 [node name="Fish3" parent="." instance=ExtResource("5_ae3ty")]
 position = Vector2(32395, 1412)
 scale = Vector2(3, 3)
 
 [node name="Fish4" parent="." instance=ExtResource("5_ae3ty")]
-position = Vector2(26114, 3654)
+position = Vector2(23342, 1474)
 rotation = -0.165806
 scale = Vector2(3, 3)
 
@@ -141,6 +141,6 @@ position = Vector2(48352, 942)
 scale = Vector2(3, 3)
 
 [node name="Fish6" parent="." instance=ExtResource("5_ae3ty")]
-position = Vector2(38154, 2314)
+position = Vector2(36825, 1408)
 rotation = -0.226893
 scale = Vector2(3, 3)
