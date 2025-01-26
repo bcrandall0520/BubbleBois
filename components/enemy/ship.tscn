@@ -1,7 +1,22 @@
-[gd_scene load_steps=6 format=3 uid="uid://bwxu8t648yuxv"]
+[gd_scene load_steps=6 format=3 uid="uid://cq8xoorso41bd"]
 
+[ext_resource type="Script" path="res://components/enemy/ship.gd" id="1_xt2km"]
 [ext_resource type="Texture2D" uid="uid://b4dpi30xh5omv" path="res://assets/hazards/ship2-removebg-preview_sprite.png" id="1_yfbs3"]
-[ext_resource type="Script" path="res://components/enemy/sprite_2d.gd" id="2_cxus2"]
+
+[sub_resource type="Animation" id="Animation_h46c1"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
 
 [sub_resource type="Animation" id="Animation_hgsd8"]
 resource_name = "Rocking"
@@ -32,42 +47,32 @@ tracks/1/keys = {
 "values": [8, 7, 6, 5, 4, 3, 2, 1, 2, 3, 4, 5, 6, 7, 8, 10, 11, 12, 13, 14, 15, 16, 15, 14, 13, 12, 11, 10, 9]
 }
 
-[sub_resource type="Animation" id="Animation_h46c1"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_uvucr"]
 _data = {
 "RESET": SubResource("Animation_h46c1"),
 "Rocking": SubResource("Animation_hgsd8")
 }
 
-[node name="Ship" type="Node2D"]
+[node name="Ship" type="Node2D" groups=["enemies"]]
+script = ExtResource("1_xt2km")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_yfbs3")
 offset = Vector2(0, 35)
 hframes = 4
 vframes = 5
-script = ExtResource("2_cxus2")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D"]
+unique_name_in_owner = true
 libraries = {
 "": SubResource("AnimationLibrary_uvucr")
 }
 
-[node name="Ship" type="Node2D" parent="."]
-position = Vector2(1055, 2181)
+[node name="ShipHitbox" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 2
 
-[node name="Sprite2D" type="Sprite2D" parent="Ship"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="ShipHitbox"]
+polygon = PackedVector2Array(-2, -187, -8, -178, -8, -148, -30, -139, -31, -139, -18, -116, -18, -115, -50, -115, -60, -147, -63, -147, -77, -69, -77, -67, -120, -63, -121, -63, -95, -41, -95, -39, -142, 29, -142, 30, -170, 35, -171, 35, -122, 171, -122, 172, 108, 171, 111, 171, 144, 141, 145, 141, 169, 66, 169, 63, 222, 26, 223, 26, 213, 15, 213, 14, 200, 22, 197, 22, 146, -35, 145, -35, 136, -82, 136, -83, 92, -93, 91, -93, 87, -134, 87, -135, 109, -140, 110, -140, 107, -157, 107, -158, 76, -162, 73, -162, 71, -117, 71, -111, 56, -115, 22, -115, 34, -132, 34, -140, 12, -148, 12, -156, 47, -163, 47, -165, -2, -188)
+
+[connection signal="body_entered" from="ShipHitbox" to="." method="_on_ship_hitbox_body_entered"]

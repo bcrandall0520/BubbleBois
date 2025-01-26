@@ -7,6 +7,7 @@ const FAST_FALL_VELOCITY = 1000.0
 
 var in_water
 var fastfalling
+signal dead
 
 func _ready():
 	var in_water = false
@@ -57,7 +58,11 @@ func pushup(force: float):
 	
 func leftTheWater():
 	in_water = false
-
+	
 func pop():
+	get_parent().get_child(0).visible = false
+	const BUBLE_POP = preload("res://assets/bubble/bubble_pop.tscn")
+	var pop = BUBLE_POP.instantiate()
+	get_parent().add_child(pop)
+	pop.global_position = global_position
 	#get_tree().paused = true
-	pass
