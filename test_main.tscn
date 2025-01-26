@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://baqkr44x8c7kf" path="res://components/platform/springyWater/Scenes/Water_Body.tscn" id="3_tk0fa"]
 [ext_resource type="PackedScene" uid="uid://cmak5xaapxgrf" path="res://components/platform/waterSurface.tscn" id="3_xaq06"]
 [ext_resource type="PackedScene" uid="uid://ca1rlinjos0y7" path="res://components/enemy/Fish.tscn" id="5_ae3ty"]
-[ext_resource type="PackedScene" uid="uid://dtcv8rtyjrq4d" path="res://bottle.tscn" id="8_1n1he"]
+[ext_resource type="PackedScene" uid="uid://cow7nrqmkvy6s" path="res://bottle.tscn" id="8_1n1he"]
 
 [node name="TestMain" type="Node2D"]
 
@@ -42,10 +42,10 @@ z_index = 1
 position = Vector2(-5649.5, 1079)
 
 [node name="Fly" parent="." instance=ExtResource("3_23shv")]
-position = Vector2(4200, 317)
+position = Vector2(3578, -572)
 
 [node name="Fish" parent="." instance=ExtResource("5_ae3ty")]
-position = Vector2(6950, -834)
+position = Vector2(6324, 1616)
 scale = Vector2(3, 3)
 
 [node name="Ship" parent="." instance=ExtResource("3_jibpa")]
@@ -57,4 +57,7 @@ position = Vector2(-29, 1250)
 
 [node name="Bubble" parent="." instance=ExtResource("1_rmo0b")]
 z_index = 5
-position = Vector2(2224, -285)
+position = Vector2(2231, 825)
+
+[node name="Bottle2" parent="." instance=ExtResource("8_1n1he")]
+position = Vector2(-395, 1904)
