@@ -1,4 +1,5 @@
 extends CharacterBody2D
+@onready var pop_vfx: AudioStreamPlayer = $"../pop"
 
 
 const SPEED = 1000.0
@@ -81,6 +82,7 @@ func pop():
 	var pop = BUBLE_POP.instantiate()
 	get_parent().add_child(pop)
 	pop.global_position = global_position
+	pop_vfx.play();
 	
 	await get_tree().create_timer(1).timeout
 	get_tree().reload_current_scene()
