@@ -52,12 +52,10 @@ scale = Vector2(3, 3)
 position = Vector2(8390, 405)
 scale = Vector2(5, 5)
 
-[node name="Bottle" parent="." instance=ExtResource("8_1n1he")]
-position = Vector2(-29, 1250)
-
 [node name="Bubble" parent="." instance=ExtResource("1_rmo0b")]
 z_index = 5
 position = Vector2(2231, 825)
 
-[node name="Bottle2" parent="." instance=ExtResource("8_1n1he")]
-position = Vector2(-395, 1904)
+[node name="Bottle" parent="." instance=ExtResource("8_1n1he")]
+position = Vector2(60566, -636)
+scale = Vector2(-1, -1)
