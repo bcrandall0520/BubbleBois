@@ -208,7 +208,7 @@ func _physics_process(delta):
 			_sprite.play("walk")
 		_sprite.flip_h = velocity.x < 0
 
-	move_and_slide()
+	move_and_collide(velocity)
 
 	coyote_timer -= delta
 	jump_buffer_timer -= delta
