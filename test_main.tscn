@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://3u1jg47oq7g1"]
+[gd_scene load_steps=9 format=3 uid="uid://b84leeh1b3wff"]
 
 [ext_resource type="PackedScene" uid="uid://dkyy5k123bd1t" path="res://components/platform/water_rect.tscn" id="1_0vtug"]
 [ext_resource type="PackedScene" uid="uid://b2ggb8u700kab" path="res://components/player/player.tscn" id="1_rmo0b"]

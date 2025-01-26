@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://dkyy5k123bd1t"]
+[gd_scene load_steps=5 format=3 uid="uid://dkyy5k123bd1t"]
 
 [ext_resource type="Script" path="res://components/platform/water.gd" id="1_3qjpx"]
 [ext_resource type="Texture2D" uid="uid://by3akwnjuhg7g" path="res://assets/backgrounds/water.png" id="2_phfrq"]
+[ext_resource type="AudioStream" uid="uid://bbn1rvdx3aq8c" path="res://music/small_water_bubble_splash.mp3" id="3_cfjgr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sc7h1"]
 size = Vector2(3506, 1269)
@@ -20,6 +21,9 @@ texture = ExtResource("2_phfrq")
 [node name="WaterCollision" type="CollisionShape2D" parent="WaterArea"]
 position = Vector2(1, 603.5)
 shape = SubResource("RectangleShape2D_sc7h1")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="WaterArea"]
+stream = ExtResource("3_cfjgr")
 
 [connection signal="body_entered" from="WaterArea" to="." method="_on_water_area_body_entered"]
 [connection signal="body_exited" from="WaterArea" to="." method="_on_water_area_body_exited"]
