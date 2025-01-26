@@ -60,14 +60,14 @@ position = Vector2(18800, 0)
 scale = Vector2(4, 4)
 
 [node name="Fly" parent="." instance=ExtResource("3_23shv")]
-position = Vector2(3578, -10572)
+position = Vector2(3578, -572)
 
 [node name="Fish" parent="." instance=ExtResource("5_ae3ty")]
 position = Vector2(6324, 1616)
 scale = Vector2(3, 3)
 
 [node name="Ship" parent="." instance=ExtResource("3_jibpa")]
-position = Vector2(8592, -10401)
+position = Vector2(8592, -401)
 scale = Vector2(5, 5)
 
 [node name="Bubble" parent="." instance=ExtResource("1_rmo0b")]
