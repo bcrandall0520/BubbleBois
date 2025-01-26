@@ -1,0 +1,89 @@
+[gd_scene load_steps=4 format=3 uid="uid://dtcv8rtyjrq4d"]
+
+[ext_resource type="Texture2D" uid="uid://dyy0xfeili035" path="res://assets/backgrounds/glass_bottle_v2.png" id="1_u764x"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jyrku"]
+size = Vector2(2908.23, 477.336)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eijdr"]
+size = Vector2(16249, 806.057)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="GlassBottleV2" type="Sprite2D" parent="."]
+position = Vector2(30628, -1309)
+scale = Vector2(9.2047, 5.62413)
+texture = ExtResource("1_u764x")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." groups=["wall"]]
+collision_layer = 17
+collision_mask = 16
+
+[node name="smallRect6" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(61118, -7982)
+rotation = 0.540244
+shape = SubResource("RectangleShape2D_jyrku")
+
+[node name="bigRect5" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(51824, 6672)
+shape = SubResource("RectangleShape2D_eijdr")
+
+[node name="bigRect6" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(61974, -840)
+rotation = 1.5697
+shape = SubResource("RectangleShape2D_eijdr")
+
+[node name="bigRect4" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(35791, 6708)
+shape = SubResource("RectangleShape2D_eijdr")
+
+[node name="smallRect4" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(61057, 5511)
+rotation = -0.777037
+shape = SubResource("RectangleShape2D_jyrku")
+
+[node name="smallRect2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(18053, -3908)
+rotation = 2.75307
+shape = SubResource("RectangleShape2D_jyrku")
+
+[node name="bigRect3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(25730, 6291)
+rotation = 0.526936
+shape = SubResource("RectangleShape2D_eijdr")
+
+[node name="bigRect" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(8124.5, 1392)
+shape = SubResource("RectangleShape2D_eijdr")
+
+[node name="smallRect" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(17539.9, 1686.9)
+rotation = 0.270122
+shape = SubResource("RectangleShape2D_jyrku")
+
+[node name="bigRect2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(8626, -3545)
+shape = SubResource("RectangleShape2D_eijdr")
+
+[node name="smallRect3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(26812, 6321)
+rotation = 0.254854
+shape = SubResource("RectangleShape2D_jyrku")
+
+[node name="bigRect7" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(52639, -8805)
+shape = SubResource("RectangleShape2D_eijdr")
+
+[node name="bigRect8" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(36528, -8805)
+shape = SubResource("RectangleShape2D_eijdr")
+
+[node name="bigRect9" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(25129, -8363)
+rotation = -0.565059
+shape = SubResource("RectangleShape2D_eijdr")
+
+[node name="smallRect5" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(27067, -8439)
+rotation = 3.04309
+shape = SubResource("RectangleShape2D_jyrku")

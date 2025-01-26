@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://3u1jg47oq7g1"]
+[gd_scene load_steps=9 format=3 uid="uid://3u1jg47oq7g1"]
 
 [ext_resource type="PackedScene" uid="uid://dkyy5k123bd1t" path="res://components/platform/water_rect.tscn" id="1_0vtug"]
 [ext_resource type="PackedScene" uid="uid://b2ggb8u700kab" path="res://components/player/player.tscn" id="1_rmo0b"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://baqkr44x8c7kf" path="res://components/platform/springyWater/Scenes/Water_Body.tscn" id="3_tk0fa"]
 [ext_resource type="PackedScene" uid="uid://cmak5xaapxgrf" path="res://components/platform/waterSurface.tscn" id="3_xaq06"]
 [ext_resource type="PackedScene" uid="uid://ca1rlinjos0y7" path="res://components/enemy/Fish.tscn" id="5_ae3ty"]
+[ext_resource type="PackedScene" uid="uid://dtcv8rtyjrq4d" path="res://bottle.tscn" id="8_1n1he"]
 
 [node name="TestMain" type="Node2D"]
 
@@ -14,7 +15,7 @@
 scale = Vector2(2, 2)
 
 [node name="WaterRect" parent="Platform" instance=ExtResource("1_0vtug")]
-position = Vector2(1677.5, 1099)
+position = Vector2(1738, 555.5)
 
 [node name="WaterSurface" parent="Platform" instance=ExtResource("3_xaq06")]
 visible = false
@@ -54,3 +55,5 @@ scale = Vector2(5, 5)
 [node name="Bubble" parent="." instance=ExtResource("1_rmo0b")]
 z_index = 5
 position = Vector2(2231, 825)
+
+[node name="Node2D" parent="." instance=ExtResource("8_1n1he")]
