@@ -1,13 +1,13 @@
-[gd_scene load_steps=10 format=3 uid="uid://3u1jg47oq7g1"]
+[gd_scene load_steps=10 format=3 uid="uid://b84leeh1b3wff"]
 
-[ext_resource type="PackedScene" path="res://components/platform/water_rect.tscn" id="1_0vtug"]
+[ext_resource type="PackedScene" uid="uid://dkyy5k123bd1t" path="res://components/platform/water_rect.tscn" id="1_0vtug"]
 [ext_resource type="PackedScene" uid="uid://b2ggb8u700kab" path="res://components/player/player.tscn" id="1_rmo0b"]
 [ext_resource type="PackedScene" uid="uid://bu242yxe3prvx" path="res://components/enemy/fly.tscn" id="3_23shv"]
-[ext_resource type="PackedScene" path="res://components/enemy/ship.tscn" id="3_jibpa"]
+[ext_resource type="PackedScene" uid="uid://cq8xoorso41bd" path="res://components/enemy/ship.tscn" id="3_jibpa"]
 [ext_resource type="PackedScene" uid="uid://baqkr44x8c7kf" path="res://components/platform/springyWater/Scenes/Water_Body.tscn" id="3_tk0fa"]
-[ext_resource type="PackedScene" path="res://components/platform/waterSurface.tscn" id="3_xaq06"]
-[ext_resource type="PackedScene" path="res://components/enemy/Fish.tscn" id="5_ae3ty"]
-[ext_resource type="PackedScene" uid="uid://dtcv8rtyjrq4d" path="res://bottle.tscn" id="8_1n1he"]
+[ext_resource type="PackedScene" uid="uid://cmak5xaapxgrf" path="res://components/platform/waterSurface.tscn" id="3_xaq06"]
+[ext_resource type="PackedScene" uid="uid://ca1rlinjos0y7" path="res://components/enemy/Fish.tscn" id="5_ae3ty"]
+[ext_resource type="PackedScene" uid="uid://cow7nrqmkvy6s" path="res://bottle.tscn" id="8_1n1he"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_j3w2p"]
 size = Vector2(706, 4717.5)
@@ -34,6 +34,7 @@ position = Vector2(-9507.5, 144.5)
 scale = Vector2(2.959, 3)
 
 [node name="Platform3" type="Node2D" parent="."]
+visible = false
 z_index = 3
 position = Vector2(11337, -23)
 scale = Vector2(2, 2)
@@ -60,19 +61,19 @@ position = Vector2(18800, 0)
 scale = Vector2(4, 4)
 
 [node name="Fly" parent="." instance=ExtResource("3_23shv")]
-position = Vector2(3578, -572)
+position = Vector2(3170, -3894)
 
 [node name="Fish" parent="." instance=ExtResource("5_ae3ty")]
-position = Vector2(6324, 1616)
+position = Vector2(16153, 2671)
 scale = Vector2(3, 3)
 
 [node name="Ship" parent="." instance=ExtResource("3_jibpa")]
-position = Vector2(8592, -401)
+position = Vector2(13552, -497)
 scale = Vector2(5, 5)
 
 [node name="Bubble" parent="." instance=ExtResource("1_rmo0b")]
 z_index = 5
-position = Vector2(283, -1616)
+position = Vector2(1112, 872)
 
 [node name="Bottle" parent="." instance=ExtResource("8_1n1he")]
 position = Vector2(60566, -636)
@@ -86,3 +87,60 @@ collision_mask = 17
 position = Vector2(60310, 371.75)
 shape = SubResource("RectangleShape2D_j3w2p")
 debug_color = Color(0.854902, 0.596078, 0.262745, 0.419608)
+
+[node name="FlyNode" parent="." instance=ExtResource("3_23shv")]
+position = Vector2(12169, -4251)
+
+[node name="FlyNode2" parent="." instance=ExtResource("3_23shv")]
+position = Vector2(27654, -5019)
+rotation = -0.298451
+
+[node name="Fly2" parent="." instance=ExtResource("3_23shv")]
+position = Vector2(30054, -3517)
+
+[node name="FlyNode3" parent="." instance=ExtResource("3_23shv")]
+position = Vector2(24234, -2285)
+
+[node name="FlyNode4" parent="." instance=ExtResource("3_23shv")]
+position = Vector2(19190, -4158)
+rotation = 0.240855
+
+[node name="FlyNode5" parent="." instance=ExtResource("3_23shv")]
+position = Vector2(35555, -2501)
+
+[node name="FlyNode6" parent="." instance=ExtResource("3_23shv")]
+position = Vector2(42291, -1334)
+
+[node name="FlyNode7" parent="." instance=ExtResource("3_23shv")]
+position = Vector2(49648, -1356)
+
+[node name="Ship2" parent="." instance=ExtResource("3_jibpa")]
+position = Vector2(31592, -444)
+scale = Vector2(5, 5)
+
+[node name="Ship3" parent="." instance=ExtResource("3_jibpa")]
+position = Vector2(44410, -510)
+scale = Vector2(5, 5)
+
+[node name="Fish2" parent="." instance=ExtResource("5_ae3ty")]
+position = Vector2(10448, 4372)
+rotation = 0.211185
+scale = Vector2(-3, 3)
+
+[node name="Fish3" parent="." instance=ExtResource("5_ae3ty")]
+position = Vector2(32395, 1412)
+scale = Vector2(3, 3)
+
+[node name="Fish4" parent="." instance=ExtResource("5_ae3ty")]
+position = Vector2(26114, 3654)
+rotation = -0.165806
+scale = Vector2(3, 3)
+
+[node name="Fish5" parent="." instance=ExtResource("5_ae3ty")]
+position = Vector2(48352, 942)
+scale = Vector2(3, 3)
+
+[node name="Fish6" parent="." instance=ExtResource("5_ae3ty")]
+position = Vector2(38154, 2314)
+rotation = -0.226893
+scale = Vector2(3, 3)

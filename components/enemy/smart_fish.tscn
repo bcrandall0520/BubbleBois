@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://cjdsp466s3qvx"]
+
+[ext_resource type="PackedScene" uid="uid://ca1rlinjos0y7" path="res://components/enemy/Fish.tscn" id="1_610ii"]
+[ext_resource type="Script" path="res://components/enemy/smart_fish.gd" id="1_x3arj"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_e5ggb"]
+
+[node name="SmartFish" type="CharacterBody2D"]
+script = ExtResource("1_x3arj")
+
+[node name="FishNode" parent="." instance=ExtResource("1_610ii")]
+position = Vector2(324, 1345)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(324, 1345)
+shape = SubResource("CircleShape2D_e5ggb")
