@@ -77,5 +77,9 @@ func pop():
 
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
+	print(body)
 	if body.is_in_group("wall"):
 		velocity.y = velocity.y * -0.0
+	if body.is_in_group("freedom"):
+		
+		get_tree().change_scene_to_file("res://alt_scenes/Retry.tscn")

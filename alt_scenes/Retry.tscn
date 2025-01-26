@@ -1,0 +1,43 @@
+[gd_scene load_steps=3 format=3 uid="uid://bj6hj5ss4lpyh"]
+
+[ext_resource type="Script" path="res://alt_scenes/retry_button.gd" id="1_oufot"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_onkqu"]
+font_size = 126
+font_color = Color(0, 0, 0, 1)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = -7.0
+offset_top = -9.0
+offset_right = 1928.0
+offset_bottom = 1083.0
+color = Color(1, 0.384314, 0.333333, 1)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 516.0
+offset_top = 161.0
+offset_right = 1407.0
+offset_bottom = 508.0
+text = "!!! YOU WON !!!
+    Play again?"
+label_settings = SubResource("LabelSettings_onkqu")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 757.0
+offset_top = 570.0
+offset_right = 1253.0
+offset_bottom = 696.0
+theme_override_font_sizes/font_size = 86
+text = "HECK YEAH!"
+script = ExtResource("1_oufot")
