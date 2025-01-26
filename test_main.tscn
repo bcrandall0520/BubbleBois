@@ -15,7 +15,7 @@
 scale = Vector2(2, 2)
 
 [node name="WaterRect" parent="Platform" instance=ExtResource("1_0vtug")]
-position = Vector2(1738, 555.5)
+position = Vector2(1829.5, 142)
 
 [node name="WaterSurface" parent="Platform" instance=ExtResource("3_xaq06")]
 visible = false
@@ -26,7 +26,7 @@ position = Vector2(11313, -33)
 scale = Vector2(-2, 2)
 
 [node name="WaterRect" parent="Platform2" instance=ExtResource("1_0vtug")]
-position = Vector2(402, 635.5)
+position = Vector2(408, 150)
 scale = Vector2(1, 1.01353)
 
 [node name="Platform3" type="Node2D" parent="."]
@@ -45,15 +45,16 @@ position = Vector2(-5649.5, 1079)
 position = Vector2(4200, 317)
 
 [node name="Fish" parent="." instance=ExtResource("5_ae3ty")]
-position = Vector2(4229, 3445)
+position = Vector2(6950, -834)
 scale = Vector2(3, 3)
 
 [node name="Ship" parent="." instance=ExtResource("3_jibpa")]
-position = Vector2(8389, 405)
+position = Vector2(8390, 405)
 scale = Vector2(5, 5)
+
+[node name="Bottle" parent="." instance=ExtResource("8_1n1he")]
+position = Vector2(-29, 1250)
 
 [node name="Bubble" parent="." instance=ExtResource("1_rmo0b")]
 z_index = 5
-position = Vector2(2231, 825)
-
-[node name="Node2D" parent="." instance=ExtResource("8_1n1he")]
+position = Vector2(2224, -285)
