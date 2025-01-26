@@ -60,9 +60,6 @@ z_index = 1
 position = Vector2(18800, 0)
 scale = Vector2(4, 4)
 
-[node name="Fly" parent="." instance=ExtResource("3_23shv")]
-position = Vector2(3170, -3894)
-
 [node name="Ship" parent="." instance=ExtResource("3_jibpa")]
 position = Vector2(13552, -497)
 scale = Vector2(5, 5)
@@ -144,3 +141,6 @@ scale = Vector2(3, 3)
 position = Vector2(36825, 1408)
 rotation = -0.226893
 scale = Vector2(3, 3)
+
+[node name="FlyNode8" parent="." instance=ExtResource("3_23shv")]
+position = Vector2(3098, -3854)
