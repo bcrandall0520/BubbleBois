@@ -9,7 +9,8 @@ var in_water
 var fastfalling
 signal dead
 
-@onready var waterbody = preload("res://components/platform/springyWater/Scenes/Water_Body.tscn")
+#@onready var waterbody = preload("res://components/platform/springyWater/Scenes/Water_Body.tscn")
+#var bodies = [];
 
 func _ready():
 	var in_water = false
@@ -30,8 +31,6 @@ func _physics_process(delta: float) -> void:
 			velocity -= get_gravity() * delta * 4
 		velocity.y -= velocity.y * delta * 0.7
 		fastfalling = false
-		
-	
 
 	# Handle jump.
 	if Input.is_action_just_pressed("player_1_jump"):
@@ -45,7 +44,18 @@ func _physics_process(delta: float) -> void:
 	else:
 		fastfalling = false
 		
+	var waterLoc = int(position.x - 1000) / 9900;
 	
+	for i in range(3):
+		get_parent().get_parent().get_child(3).get_child(i).position = Vector2(-1000 + 9900 * (waterLoc + i -1), 0)
+	if waterLoc==0:
+		get_parent().get_parent().get_child(3).get_child(0).visible = false;
+	else:
+		get_parent().get_parent().get_child(3).get_child(0).visible = true;
+	#get_parent().get_parent().get_child(3).get_child(0)
+	#print(get_parent().get_parent().get_child(3).get_child(0))
+	#w = waterbody.instance();
+	#w.queue_free()
 	
 		
 	# Get the input direction and handle the movement/deceleration.
