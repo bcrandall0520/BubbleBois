@@ -1,7 +1,13 @@
-[gd_scene load_steps=7 format=3 uid="uid://bu242yxe3prvx"]
+[gd_scene load_steps=8 format=3 uid="uid://bu242yxe3prvx"]
 
 [ext_resource type="Texture2D" uid="uid://dbtee0bjx312b" path="res://assets/hazards/Giant Fly Sprite Sheet.png" id="1_5sh43"]
 [ext_resource type="Script" path="res://components/enemy/fly.gd" id="2_bvhh4"]
+
+[sub_resource type="Curve2D" id="Curve2D_0fun1"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -64.8269, 25.0543, 0, 0, 0, 0, -12.5685, -19.7623, 0, 0, 0, 0, 58.3773, -19.2661, 0, 0, 0, 0, 81.8605, 14.4703, 0, 0, 0, 0, 102.863, 44.5685, 0, 0, 0, 0, 162.729, 18.522, 0, 0, 0, 0, 131.018, -24.0207, 0, 0, 0, 0, 85.1266, -7.89664, 0, 0, 0, 0, 28.9406, 34.3979, 0, 0, 0, 0, -10.0052, 49.1163, 0, 0, 0, 0, -10.0052, 49.1163, 0, 0, 0, 0, -64.8269, 25.0543)
+}
+point_count = 12
 
 [sub_resource type="Animation" id="Animation_rqf02"]
 resource_name = "Idle"
@@ -44,30 +50,44 @@ _data = {
 [sub_resource type="CircleShape2D" id="CircleShape2D_nbhhs"]
 radius = 7.03446
 
-[node name="Fly" type="Sprite2D"]
-texture_filter = 1
+[node name="FlyNode" type="Node2D"]
+script = ExtResource("2_bvhh4")
+
+[node name="Path2D" type="Path2D" parent="."]
 position = Vector2(307, 307)
 scale = Vector2(24.1875, 24.1875)
+curve = SubResource("Curve2D_0fun1")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+position = Vector2(-64.8269, 25.0543)
+rotation = -0.708887
+rotates = false
+
+[node name="Fly" type="Sprite2D" parent="Path2D/PathFollow2D"]
+texture_filter = 1
+position = Vector2(0.874268, 0.695297)
+rotation = 0.708887
 texture = ExtResource("1_5sh43")
 flip_h = true
 hframes = 6
 vframes = 5
-script = ExtResource("2_bvhh4")
 
-[node name="FlyAnimation" type="AnimationPlayer" parent="."]
+[node name="FlyAnimation" type="AnimationPlayer" parent="Path2D/PathFollow2D/Fly"]
+unique_name_in_owner = true
 libraries = {
 "": SubResource("AnimationLibrary_kgyae")
 }
 
-[node name="FlyHitbox" type="Area2D" parent="."]
+[node name="FlyHitbox" type="Area2D" parent="Path2D/PathFollow2D/Fly"]
 position = Vector2(-0.4, 0.4)
 collision_layer = 2
 collision_mask = 2
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="FlyHitbox"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Path2D/PathFollow2D/Fly/FlyHitbox"]
 light_mask = 3
 visibility_layer = 3
 position = Vector2(-2.98023e-08, 2.98023e-08)
 shape = SubResource("CircleShape2D_nbhhs")
 
-[connection signal="body_entered" from="FlyHitbox" to="." method="_on_fly_hitbox_body_entered"]
+[connection signal="body_entered" from="Path2D/PathFollow2D/Fly/FlyHitbox" to="." method="_on_fly_hitbox_body_entered"]
+[connection signal="body_entered" from="Path2D/PathFollow2D/Fly/FlyHitbox" to="Path2D/PathFollow2D/Fly" method="_on_fly_hitbox_body_entered"]

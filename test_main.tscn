@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://baqkr44x8c7kf" path="res://components/platform/springyWater/Scenes/Water_Body.tscn" id="3_tk0fa"]
 [ext_resource type="PackedScene" uid="uid://cmak5xaapxgrf" path="res://components/platform/waterSurface.tscn" id="3_xaq06"]
 [ext_resource type="PackedScene" uid="uid://ca1rlinjos0y7" path="res://components/enemy/Fish.tscn" id="5_ae3ty"]
-[ext_resource type="PackedScene" uid="uid://dtcv8rtyjrq4d" path="res://bottle.tscn" id="8_1n1he"]
+[ext_resource type="PackedScene" uid="uid://cow7nrqmkvy6s" path="res://bottle.tscn" id="8_1n1he"]
 
 [node name="TestMain" type="Node2D"]
 
@@ -56,4 +56,5 @@ scale = Vector2(5, 5)
 z_index = 5
 position = Vector2(2231, 825)
 
-[node name="Node2D" parent="." instance=ExtResource("8_1n1he")]
+[node name="Bottle" parent="." instance=ExtResource("8_1n1he")]
+position = Vector2(-395, 1904)

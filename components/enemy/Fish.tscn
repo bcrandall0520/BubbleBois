@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://ca1rlinjos0y7"]
+[gd_scene load_steps=7 format=3 uid="uid://ca1rlinjos0y7"]
 
 [ext_resource type="Texture2D" uid="uid://do2p5lwxc6bg2" path="res://assets/hazards/fishartBlink.png" id="1_2xfo8"]
 [ext_resource type="Script" path="res://components/enemy/fish.gd" id="2_njk14"]
@@ -41,26 +41,37 @@ _data = {
 "RESET": SubResource("Animation_wu23n")
 }
 
-[node name="Fish" type="Sprite2D" groups=["enemies"]]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6ejsg"]
+radius = 96.0
+height = 264.0
+
+[node name="FishNode" type="Node2D"]
+script = ExtResource("2_njk14")
+
+[node name="FishSprite" type="Sprite2D" parent="."]
 texture = ExtResource("1_2xfo8")
 hframes = 3
 vframes = 4
 frame = 1
-script = ExtResource("2_njk14")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="FishSprite"]
 unique_name_in_owner = true
 libraries = {
 "": SubResource("AnimationLibrary_d1jyp")
 }
 
-[node name="FishHitbox" type="Area2D" parent="."]
+[node name="FishHitbox" type="Area2D" parent="FishSprite"]
 light_mask = 3
 visibility_layer = 3
 collision_layer = 2
 collision_mask = 2
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="FishHitbox"]
-polygon = PackedVector2Array(-52, -114, -120, -101, -175, -57, -190, -16, -180, 33, -145, 73, -82, 99, 18, 94, 88, 52, 154, 90, 180, 76, 191, 42, 160, -6, 192, -68, 169, -104, 127, -99, 87, -66, 14, -108)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FishSprite/FishHitbox"]
+position = Vector2(-42, -7)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_6ejsg")
 
-[connection signal="body_entered" from="FishHitbox" to="." method="_on_fish_hitbox_body_entered"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="FishSprite/FishHitbox"]
+polygon = PackedVector2Array(151, -100, 60, -17, 156, 83)
+
+[connection signal="body_entered" from="FishSprite/FishHitbox" to="." method="_on_fish_hitbox_body_entered"]
