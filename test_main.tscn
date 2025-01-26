@@ -1,14 +1,17 @@
-[gd_scene load_steps=6 format=3 uid="uid://3u1jg47oq7g1"]
+[gd_scene load_steps=8 format=3 uid="uid://3u1jg47oq7g1"]
 
 [ext_resource type="PackedScene" uid="uid://dkyy5k123bd1t" path="res://components/platform/water_rect.tscn" id="1_0vtug"]
 [ext_resource type="PackedScene" uid="uid://b2ggb8u700kab" path="res://components/player/player.tscn" id="1_rmo0b"]
 [ext_resource type="PackedScene" uid="uid://bu242yxe3prvx" path="res://components/enemy/fly.tscn" id="3_23shv"]
+[ext_resource type="PackedScene" uid="uid://bwxu8t648yuxv" path="res://components/enemy/ship.tscn" id="3_jibpa"]
 [ext_resource type="PackedScene" uid="uid://baqkr44x8c7kf" path="res://components/platform/springyWater/Scenes/Water_Body.tscn" id="3_tk0fa"]
-[ext_resource type="PackedScene" uid="uid://by37765wo3hlp" path="res://components/platform/waterSurface.tscn" id="3_xaq06"]
+[ext_resource type="PackedScene" uid="uid://cmak5xaapxgrf" path="res://components/platform/waterSurface.tscn" id="3_xaq06"]
+[ext_resource type="PackedScene" uid="uid://cpy4fx0mjhfir" path="res://components/enemy/Fish.tscn" id="5_ae3ty"]
 
 [node name="TestMain" type="Node2D"]
 
 [node name="Platform" type="Node2D" parent="."]
+scale = Vector2(2, 2)
 
 [node name="WaterRect" parent="Platform" instance=ExtResource("1_0vtug")]
 position = Vector2(5355, 646)
@@ -20,8 +23,37 @@ position = Vector2(8, 557)
 [node name="Water_Body" parent="Platform" instance=ExtResource("3_tk0fa")]
 position = Vector2(19, 603)
 
+[node name="Platform2" type="Node2D" parent="."]
+position = Vector2(11313, -33)
+scale = Vector2(-2, 2)
+
+[node name="WaterRect" parent="Platform2" instance=ExtResource("1_0vtug")]
+position = Vector2(1740, 584)
+scale = Vector2(1, 1.01353)
+
+[node name="WaterSurface" parent="Platform2" instance=ExtResource("3_xaq06")]
+position = Vector2(8, 557)
+
+[node name="Platform3" type="Node2D" parent="."]
+position = Vector2(11337, -23)
+scale = Vector2(2, 2)
+
+[node name="WaterRect" parent="Platform3" instance=ExtResource("1_0vtug")]
+position = Vector2(1740, 584)
+
+[node name="WaterSurface" parent="Platform3" instance=ExtResource("3_xaq06")]
+position = Vector2(8, 557)
+
 [node name="Fly" parent="." instance=ExtResource("3_23shv")]
-position = Vector2(1236, 238)
+position = Vector2(4200, 317)
+
+[node name="Fish" parent="." instance=ExtResource("5_ae3ty")]
+position = Vector2(4597, 2341)
+scale = Vector2(3, 3)
 
 [node name="Bubble" parent="." instance=ExtResource("1_rmo0b")]
-position = Vector2(466, 112)
+position = Vector2(2231, 825)
+
+[node name="Ship" parent="." instance=ExtResource("3_jibpa")]
+position = Vector2(8389, 405)
+scale = Vector2(5, 5)

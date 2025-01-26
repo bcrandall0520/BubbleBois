@@ -323,7 +323,6 @@ metadata/_local_pose_override_enabled_ = true
 [node name="Bone-8" type="Bone2D" parent="SoftBody2D/Skeleton2D"]
 position = Vector2(16, 3)
 rotation = 2.47758
-scale = Vector2(1, 1)
 rest = Transform2D(-0.787525, 0.616283, -0.616283, -0.787525, 16, 3)
 auto_calculate_length_and_angle = false
 length = 8.0
@@ -376,7 +375,6 @@ metadata/_local_pose_override_enabled_ = true
 [node name="Bone-12" type="Bone2D" parent="SoftBody2D/Skeleton2D"]
 position = Vector2(16, 29)
 rotation = -2.47758
-scale = Vector2(1, 1)
 rest = Transform2D(-0.787525, -0.616283, 0.616283, -0.787525, 16, 29)
 auto_calculate_length_and_angle = false
 length = 8.0
@@ -442,7 +440,6 @@ metadata/_local_pose_override_enabled_ = true
 [node name="Bone-17" type="Bone2D" parent="SoftBody2D/Skeleton2D"]
 position = Vector2(23.2657, 29.1251)
 rotation = -0.805855
-scale = Vector2(1, 1)
 rest = Transform2D(0.692495, -0.721423, 0.721423, 0.692495, 23.2657, 29.1251)
 auto_calculate_length_and_angle = false
 length = 8.0
@@ -1684,7 +1681,15 @@ node_b = NodePath("../../SoftBody2D/Bone-19")
 softness = 0.02
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
-position = Vector2(7, 20)
+position = Vector2(204, 7)
+zoom = Vector2(0.2, 0.2)
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
+drag_left_margin = 0.4
+drag_top_margin = 1.0
+drag_right_margin = 0.4
+drag_bottom_margin = 1.0
+editor_draw_drag_margin = true
 
 [node name="TopSpringJoint" type="DampedSpringJoint2D" parent="CharacterBody2D"]
 position = Vector2(0, -91)
