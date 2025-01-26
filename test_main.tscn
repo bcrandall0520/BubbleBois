@@ -1,13 +1,16 @@
-[gd_scene load_steps=9 format=3 uid="uid://b84leeh1b3wff"]
+[gd_scene load_steps=10 format=3 uid="uid://3u1jg47oq7g1"]
 
-[ext_resource type="PackedScene" uid="uid://dkyy5k123bd1t" path="res://components/platform/water_rect.tscn" id="1_0vtug"]
+[ext_resource type="PackedScene" path="res://components/platform/water_rect.tscn" id="1_0vtug"]
 [ext_resource type="PackedScene" uid="uid://b2ggb8u700kab" path="res://components/player/player.tscn" id="1_rmo0b"]
 [ext_resource type="PackedScene" uid="uid://bu242yxe3prvx" path="res://components/enemy/fly.tscn" id="3_23shv"]
-[ext_resource type="PackedScene" uid="uid://cq8xoorso41bd" path="res://components/enemy/ship.tscn" id="3_jibpa"]
+[ext_resource type="PackedScene" path="res://components/enemy/ship.tscn" id="3_jibpa"]
 [ext_resource type="PackedScene" uid="uid://baqkr44x8c7kf" path="res://components/platform/springyWater/Scenes/Water_Body.tscn" id="3_tk0fa"]
-[ext_resource type="PackedScene" uid="uid://cmak5xaapxgrf" path="res://components/platform/waterSurface.tscn" id="3_xaq06"]
-[ext_resource type="PackedScene" uid="uid://ca1rlinjos0y7" path="res://components/enemy/Fish.tscn" id="5_ae3ty"]
-[ext_resource type="PackedScene" uid="uid://cow7nrqmkvy6s" path="res://bottle.tscn" id="8_1n1he"]
+[ext_resource type="PackedScene" path="res://components/platform/waterSurface.tscn" id="3_xaq06"]
+[ext_resource type="PackedScene" path="res://components/enemy/Fish.tscn" id="5_ae3ty"]
+[ext_resource type="PackedScene" uid="uid://dtcv8rtyjrq4d" path="res://bottle.tscn" id="8_1n1he"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j3w2p"]
+size = Vector2(706, 4717.5)
 
 [node name="TestMain" type="Node2D"]
 
@@ -74,3 +77,12 @@ position = Vector2(283, -1616)
 [node name="Bottle" parent="." instance=ExtResource("8_1n1he")]
 position = Vector2(60566, -636)
 rotation = -3.14159
+
+[node name="Freedom" type="StaticBody2D" parent="." groups=["freedom"]]
+collision_layer = 17
+collision_mask = 17
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Freedom" groups=["freedom"]]
+position = Vector2(60310, 371.75)
+shape = SubResource("RectangleShape2D_j3w2p")
+debug_color = Color(0.854902, 0.596078, 0.262745, 0.419608)
