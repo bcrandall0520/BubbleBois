@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://dtcv8rtyjrq4d"]
 
-[ext_resource type="Texture2D" uid="uid://dpxwhfmwdgni" path="res://assets/backgrounds/glass_bottle_v2.png" id="1_u764x"]
+[ext_resource type="Texture2D" uid="uid://dyy0xfeili035" path="res://assets/backgrounds/glass_bottle_v2.png" id="1_u764x"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jyrku"]
 size = Vector2(2908.23, 477.336)
