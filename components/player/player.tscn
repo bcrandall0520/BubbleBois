@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://8st4scqt06l8"]
+[gd_scene load_steps=31 format=3 uid="uid://b2ggb8u700kab"]
 
 [ext_resource type="Texture2D" uid="uid://b67gk2phgku4" path="res://assets/bubble/bubble.png" id="1_m8vqy"]
 [ext_resource type="Shader" path="res://assets/bubble/bubble.gdshader" id="1_no5uk"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://by37765wo3hlp"]
+[gd_scene load_steps=3 format=3 uid="uid://cmak5xaapxgrf"]
 
 [ext_resource type="Script" path="res://components/platform/water_surface.gd" id="1_xerhk"]
 
