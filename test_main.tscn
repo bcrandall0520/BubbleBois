@@ -57,4 +57,5 @@ z_index = 5
 position = Vector2(2231, 825)
 
 [node name="Bottle" parent="." instance=ExtResource("8_1n1he")]
-position = Vector2(-395, 1904)
+position = Vector2(60566, -636)
+scale = Vector2(-1, -1)
