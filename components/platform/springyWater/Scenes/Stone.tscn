@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://cahmwr354jc5o"]
+
+[ext_resource type="Texture2D" uid="uid://cehasodm8ypph" path="res://components/platform/springyWater/Sprites/Sprite.png" id="1"]
+[ext_resource type="Script" path="res://components/platform/springyWater/Scenes/Stone.gd" id="2"]
+
+[sub_resource type="RectangleShape2D" id="1"]
+size = Vector2(24, 20)
+
+[node name="Stone" type="CharacterBody2D"]
+script = ExtResource("2")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("1")

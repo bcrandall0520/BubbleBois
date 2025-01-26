@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://drrqwuxlqd43t"]
+
+[ext_resource type="PackedScene" uid="uid://baqkr44x8c7kf" path="res://components/platform/springyWater/Scenes/Water_Body.tscn" id="1"]
+[ext_resource type="Texture2D" uid="uid://vsp837oh3v0y" path="res://components/platform/springyWater/Sprites/scene.png" id="2"]
+[ext_resource type="Script" path="res://components/platform/springyWater/Main.gd" id="3"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("3")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = -1
+texture = ExtResource("2")
+centered = false
+offset = Vector2(0, -15)
+
+[node name="Water_Body" parent="." instance=ExtResource("1")]
+z_index = 1
+position = Vector2(-9.21958, 116.238)
