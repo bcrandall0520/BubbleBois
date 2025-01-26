@@ -9,6 +9,8 @@ var in_water
 var fastfalling
 signal dead
 
+@onready var waterbody = preload("res://components/platform/springyWater/Scenes/Water_Body.tscn")
+
 func _ready():
 	var in_water = false
 	var fastfalling = false
@@ -41,6 +43,8 @@ func _physics_process(delta: float) -> void:
 		fastfalling = true
 	else:
 		fastfalling = false
+		
+	
 	
 		
 	# Get the input direction and handle the movement/deceleration.

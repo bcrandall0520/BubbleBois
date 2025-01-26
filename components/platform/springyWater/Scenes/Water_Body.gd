@@ -13,9 +13,9 @@ var springs = []
 var passes = 12
 
 #distance in pixel between each spring
-@export var distance_between_springs = 32
+@export var distance_between_springs = 50 #32
 #number of springs in the scene
-@export var spring_number = 60
+@export var spring_number = 100#60
 
 #total water body lenght
 var water_lenght = distance_between_springs * spring_number
