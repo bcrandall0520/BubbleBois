@@ -1,11 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://b84leeh1b3wff"]
+[gd_scene load_steps=7 format=3 uid="uid://3u1jg47oq7g1"]
 
-[ext_resource type="PackedScene" path="res://components/platform/water_rect.tscn" id="1_0vtug"]
+[ext_resource type="PackedScene" uid="uid://dkyy5k123bd1t" path="res://components/platform/water_rect.tscn" id="1_0vtug"]
 [ext_resource type="PackedScene" uid="uid://b2ggb8u700kab" path="res://components/player/player.tscn" id="1_rmo0b"]
-[ext_resource type="PackedScene" uid="uid://bydsufjkxb45j" path="res://components/enemy/fly.tscn" id="3_23shv"]
-[ext_resource type="PackedScene" uid="uid://bwxu8t648yuxv" path="res://components/enemy/ship.tscn" id="3_jibpa"]
-[ext_resource type="PackedScene" path="res://components/platform/waterSurface.tscn" id="3_xaq06"]
-[ext_resource type="PackedScene" uid="uid://cpy4fx0mjhfir" path="res://components/enemy/Fish.tscn" id="5_ae3ty"]
+[ext_resource type="PackedScene" uid="uid://bu242yxe3prvx" path="res://components/enemy/fly.tscn" id="3_23shv"]
+[ext_resource type="PackedScene" path="res://components/enemy/ship.tscn" id="3_jibpa"]
+[ext_resource type="PackedScene" uid="uid://cmak5xaapxgrf" path="res://components/platform/waterSurface.tscn" id="3_xaq06"]
+[ext_resource type="PackedScene" path="res://components/enemy/Fish.tscn" id="5_ae3ty"]
 
 [node name="TestMain" type="Node2D"]
 
