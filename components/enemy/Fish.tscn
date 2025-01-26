@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://cpy4fx0mjhfir"]
+[gd_scene load_steps=7 format=3 uid="uid://ca1rlinjos0y7"]
 
 [ext_resource type="Texture2D" uid="uid://do2p5lwxc6bg2" path="res://assets/hazards/fishartBlink.png" id="1_2xfo8"]
 [ext_resource type="Script" path="res://components/enemy/fish.gd" id="2_njk14"]
@@ -41,16 +41,29 @@ _data = {
 "RESET": SubResource("Animation_wu23n")
 }
 
-[node name="Fish" type="Node2D"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_yp8m6"]
+radius = 197.003
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Fish" type="Sprite2D" groups=["enemies"]]
 texture = ExtResource("1_2xfo8")
 hframes = 3
 vframes = 4
 frame = 1
 script = ExtResource("2_njk14")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+unique_name_in_owner = true
 libraries = {
 "": SubResource("AnimationLibrary_d1jyp")
 }
+
+[node name="FishHitbox" type="Area2D" parent="."]
+light_mask = 3
+visibility_layer = 3
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FishHitbox"]
+shape = SubResource("CircleShape2D_yp8m6")
+
+[connection signal="body_entered" from="FishHitbox" to="." method="_on_fish_hitbox_body_entered"]
