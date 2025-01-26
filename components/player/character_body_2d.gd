@@ -74,14 +74,17 @@ func pushup(force: float):
 	
 func leftTheWater():
 	in_water = false
-	
+
 func pop():
 	get_parent().get_child(0).visible = false
 	const BUBLE_POP = preload("res://assets/bubble/bubble_pop.tscn")
 	var pop = BUBLE_POP.instantiate()
 	get_parent().add_child(pop)
 	pop.global_position = global_position
-	#get_tree().paused = true
+	
+	await get_tree().create_timer(1).timeout
+	get_tree().reload_current_scene()
+		#get_tree().paused = true
 
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
