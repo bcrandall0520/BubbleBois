@@ -192,6 +192,8 @@ size = Vector2(46.5938, 46.5938)
 radius = 100.02
 
 [node name="Bubble" type="Node2D"]
+light_mask = 7
+visibility_layer = 7
 
 [node name="SoftBody2D" type="Polygon2D" parent="."]
 material = SubResource("ShaderMaterial_ukdvx")

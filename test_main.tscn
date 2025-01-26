@@ -1,19 +1,24 @@
-[gd_scene load_steps=5 format=3 uid="uid://3u1jg47oq7g1"]
+[gd_scene load_steps=6 format=3 uid="uid://3u1jg47oq7g1"]
 
 [ext_resource type="PackedScene" uid="uid://dkyy5k123bd1t" path="res://components/platform/water_rect.tscn" id="1_0vtug"]
 [ext_resource type="PackedScene" uid="uid://b2ggb8u700kab" path="res://components/player/player.tscn" id="1_rmo0b"]
 [ext_resource type="PackedScene" uid="uid://bu242yxe3prvx" path="res://components/enemy/fly.tscn" id="3_23shv"]
-[ext_resource type="PackedScene" path="res://components/platform/waterSurface.tscn" id="3_xaq06"]
+[ext_resource type="PackedScene" uid="uid://baqkr44x8c7kf" path="res://components/platform/springyWater/Scenes/Water_Body.tscn" id="3_tk0fa"]
+[ext_resource type="PackedScene" uid="uid://by37765wo3hlp" path="res://components/platform/waterSurface.tscn" id="3_xaq06"]
 
 [node name="TestMain" type="Node2D"]
 
 [node name="Platform" type="Node2D" parent="."]
 
 [node name="WaterRect" parent="Platform" instance=ExtResource("1_0vtug")]
-position = Vector2(1740, 584)
+position = Vector2(5355, 646)
 
 [node name="WaterSurface" parent="Platform" instance=ExtResource("3_xaq06")]
+visible = false
 position = Vector2(8, 557)
+
+[node name="Water_Body" parent="Platform" instance=ExtResource("3_tk0fa")]
+position = Vector2(19, 603)
 
 [node name="Fly" parent="." instance=ExtResource("3_23shv")]
 position = Vector2(1236, 238)
