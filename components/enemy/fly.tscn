@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://bu242yxe3prvx"]
+[gd_scene load_steps=7 format=3 uid="uid://ksq0pe1x05o6"]
 
 [ext_resource type="Texture2D" uid="uid://dbtee0bjx312b" path="res://assets/hazards/Giant Fly Sprite Sheet.png" id="1_5sh43"]
 [ext_resource type="Script" path="res://components/enemy/fly.gd" id="2_bvhh4"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://b2ggb8u700kab"]
+[gd_scene load_steps=31 format=3 uid="uid://8st4scqt06l8"]
 
 [ext_resource type="Texture2D" uid="uid://b67gk2phgku4" path="res://assets/bubble/bubble.png" id="1_m8vqy"]
 [ext_resource type="Shader" path="res://assets/bubble/bubble.gdshader" id="1_no5uk"]
@@ -1682,7 +1682,15 @@ node_b = NodePath("../../SoftBody2D/Bone-19")
 softness = 0.02
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
-position = Vector2(7, 20)
+position = Vector2(204, 7)
+zoom = Vector2(0.2, 0.2)
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
+drag_left_margin = 0.4
+drag_top_margin = 1.0
+drag_right_margin = 0.4
+drag_bottom_margin = 1.0
+editor_draw_drag_margin = true
 
 [node name="TopSpringJoint" type="DampedSpringJoint2D" parent="CharacterBody2D"]
 position = Vector2(0, -91)
