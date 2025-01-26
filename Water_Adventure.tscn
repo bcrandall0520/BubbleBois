@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://brwn5yuwybmkg"]
+
+[ext_resource type="AudioStream" uid="uid://b3dsdwcfm55pa" path="res://music/music_game_background.mp3" id="1_qumbo"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer"]
+stream = ExtResource("1_qumbo")
+volume_db = 8.7
+autoplay = true
+parameters/looping = true

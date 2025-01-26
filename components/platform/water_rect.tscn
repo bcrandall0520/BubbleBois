@@ -24,6 +24,7 @@ shape = SubResource("RectangleShape2D_sc7h1")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="WaterArea"]
 stream = ExtResource("3_cfjgr")
+volume_db = -11.995
 
 [connection signal="body_entered" from="WaterArea" to="." method="_on_water_area_body_entered"]
 [connection signal="body_exited" from="WaterArea" to="." method="_on_water_area_body_exited"]
