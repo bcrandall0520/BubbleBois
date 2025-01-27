@@ -19,6 +19,12 @@ func _ready():
 	$"/root/PlayerWatch".register_player(self)
 
 func _physics_process(delta: float) -> void:
+	# dumb water fix
+	if global_position.y > 0 and not in_water:
+		print('Global.y')
+		print(global_position.y)
+		in_water = true
+	
 	# Add the gravity.
 	if not in_water:
 		if fastfalling:
@@ -90,7 +96,6 @@ func pop():
 
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
-	print(body)
 	if body.is_in_group("wall"):
 		velocity.y = velocity.y * -0.0
 
