@@ -2,7 +2,7 @@ extends CharacterBody2D
 @onready var pop_vfx: AudioStreamPlayer = $"../pop"
 
 
-const SPEED = 1000.0
+const SPEED = 2000.0
 const JUMP_VELOCITY = -3000.0
 const FAST_FALL_VELOCITY = 1000.0
 

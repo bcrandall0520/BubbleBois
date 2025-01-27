@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://components/platform/water.gd" id="1_3qjpx"]
 [ext_resource type="Texture2D" uid="uid://by3akwnjuhg7g" path="res://assets/backgrounds/water.png" id="2_phfrq"]
-[ext_resource type="AudioStream" uid="uid://bbn1rvdx3aq8c" path="res://music/small_water_bubble_splash.mp3" id="3_cfjgr"]
+[ext_resource type="AudioStream" uid="uid://bjag3ue502yc0" path="res://music/small_water_bubble_splash.mp3" id="3_cfjgr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sc7h1"]
 size = Vector2(3506, 1269)

@@ -62,8 +62,9 @@ position = Vector2(10, 17)
 rotation = 0.51091
 
 [node name="FishSprite" type="Sprite2D" parent="Path2D/PathFollow2D"]
+rotation = -3.10843
 texture = ExtResource("1_2xfo8")
-flip_h = true
+flip_v = true
 hframes = 3
 vframes = 4
 frame = 1

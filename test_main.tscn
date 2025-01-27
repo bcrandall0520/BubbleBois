@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://b84leeh1b3wff"]
+[gd_scene load_steps=11 format=3 uid="uid://b84leeh1b3wff"]
 
 [ext_resource type="PackedScene" uid="uid://dkyy5k123bd1t" path="res://components/platform/water_rect.tscn" id="1_0vtug"]
 [ext_resource type="PackedScene" uid="uid://b2ggb8u700kab" path="res://components/player/player.tscn" id="1_rmo0b"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://cq8xoorso41bd" path="res://components/enemy/ship.tscn" id="3_jibpa"]
 [ext_resource type="PackedScene" uid="uid://baqkr44x8c7kf" path="res://components/platform/springyWater/Scenes/Water_Body.tscn" id="3_tk0fa"]
 [ext_resource type="PackedScene" uid="uid://cmak5xaapxgrf" path="res://components/platform/waterSurface.tscn" id="3_xaq06"]
+[ext_resource type="PackedScene" uid="uid://cjdsp466s3qvx" path="res://components/enemy/smart_fish.tscn" id="4_o6klx"]
 [ext_resource type="PackedScene" uid="uid://ca1rlinjos0y7" path="res://components/enemy/Fish.tscn" id="5_ae3ty"]
 [ext_resource type="PackedScene" uid="uid://cow7nrqmkvy6s" path="res://bottle.tscn" id="8_1n1he"]
 
@@ -47,16 +48,24 @@ scale = Vector2(2, 1.5)
 z_index = 1
 position = Vector2(-1000, 0)
 scale = Vector2(2, 2)
+distance_between_springs = 500
+spring_number = 10
+depth = 400
 
 [node name="Water_Body2" parent="PlatformWater" instance=ExtResource("3_tk0fa")]
 z_index = 1
 position = Vector2(8900, 0)
 scale = Vector2(2, 2)
+distance_between_springs = 500
+spring_number = 10
 
 [node name="Water_Body3" parent="PlatformWater" instance=ExtResource("3_tk0fa")]
 z_index = 1
 position = Vector2(18800, 0)
 scale = Vector2(4, 4)
+distance_between_springs = 500
+spring_number = 10
+depth = 400
 
 [node name="Ship" parent="." instance=ExtResource("3_jibpa")]
 position = Vector2(13552, -497)
@@ -64,7 +73,7 @@ scale = Vector2(5, 5)
 
 [node name="Bubble" parent="." instance=ExtResource("1_rmo0b")]
 z_index = 5
-position = Vector2(1112, 872)
+position = Vector2(959, -704)
 
 [node name="Bottle" parent="." instance=ExtResource("8_1n1he")]
 position = Vector2(60566, -636)
@@ -142,3 +151,7 @@ scale = Vector2(3, 3)
 
 [node name="FlyNode8" parent="." instance=ExtResource("3_23shv")]
 position = Vector2(3098, -3854)
+
+[node name="SmartFish" parent="." instance=ExtResource("4_o6klx")]
+position = Vector2(7867, 1363)
+scale = Vector2(3, 3)
