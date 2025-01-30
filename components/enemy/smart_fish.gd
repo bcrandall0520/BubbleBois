@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
 const speed = 1300
+const detection_range = 9000
 var player
 var fish_sprite
 
@@ -10,8 +11,7 @@ func _ready() -> void:
 	
 func _process(delta: float) -> void:
 	var dist = player.global_position.x - fish_sprite.global_position.x
-	print(dist)
-	if player.in_water and dist < 12000 and -dist < 12000:
+	if player.in_water and dist < detection_range and -dist < detection_range:
 		$FishNode.idle = false
 		seek(delta)
 	else:
@@ -31,6 +31,3 @@ func seek(delta):
 		fish_sprite.flip_h = false
 	
 	fish_sprite.rotation = direction_to_player.angle()
-	
-	print(fish_sprite.rotation)
-	print(direction_to_player.angle())

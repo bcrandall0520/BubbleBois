@@ -1,11 +1,12 @@
 extends Node2D
 
-const speed = 0.1
+const speed = 0.2
 var idle
 
 func _ready():
 	%AnimationPlayer.play('Eye')
 	idle = true
+	$Path2D/PathFollow2D.progress_ratio = randf()	
 
 
 func _on_fish_hitbox_body_entered(body: Node2D) -> void:

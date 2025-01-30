@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://b84leeh1b3wff"]
+[gd_scene load_steps=10 format=3 uid="uid://b84leeh1b3wff"]
 
 [ext_resource type="PackedScene" uid="uid://dkyy5k123bd1t" path="res://components/platform/water_rect.tscn" id="1_0vtug"]
 [ext_resource type="PackedScene" uid="uid://b2ggb8u700kab" path="res://components/player/player.tscn" id="1_rmo0b"]
@@ -7,7 +7,6 @@
 [ext_resource type="PackedScene" uid="uid://baqkr44x8c7kf" path="res://components/platform/springyWater/Scenes/Water_Body.tscn" id="3_tk0fa"]
 [ext_resource type="PackedScene" uid="uid://cmak5xaapxgrf" path="res://components/platform/waterSurface.tscn" id="3_xaq06"]
 [ext_resource type="PackedScene" uid="uid://cjdsp466s3qvx" path="res://components/enemy/smart_fish.tscn" id="4_o6klx"]
-[ext_resource type="PackedScene" uid="uid://ca1rlinjos0y7" path="res://components/enemy/Fish.tscn" id="5_ae3ty"]
 [ext_resource type="PackedScene" uid="uid://cow7nrqmkvy6s" path="res://bottle.tscn" id="8_1n1he"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_j3w2p"]
@@ -122,36 +121,46 @@ scale = Vector2(5, 5)
 position = Vector2(44410, -510)
 scale = Vector2(5, 5)
 
-[node name="Fish2" parent="." instance=ExtResource("5_ae3ty")]
-position = Vector2(10448, 1843)
-rotation = 0.211185
-scale = Vector2(-3, 3)
-
-[node name="Fish" parent="." instance=ExtResource("5_ae3ty")]
-position = Vector2(14160, 1644)
-scale = Vector2(3, 3)
-
-[node name="Fish3" parent="." instance=ExtResource("5_ae3ty")]
-position = Vector2(32395, 1412)
-scale = Vector2(3, 3)
-
-[node name="Fish4" parent="." instance=ExtResource("5_ae3ty")]
-position = Vector2(23342, 1474)
-rotation = -0.165806
-scale = Vector2(3, 3)
-
-[node name="Fish5" parent="." instance=ExtResource("5_ae3ty")]
-position = Vector2(48352, 942)
-scale = Vector2(3, 3)
-
-[node name="Fish6" parent="." instance=ExtResource("5_ae3ty")]
-position = Vector2(36825, 1408)
-rotation = -0.226893
-scale = Vector2(3, 3)
-
 [node name="FlyNode8" parent="." instance=ExtResource("3_23shv")]
 position = Vector2(3098, -3854)
 
 [node name="SmartFish" parent="." instance=ExtResource("4_o6klx")]
-position = Vector2(7867, 1363)
+position = Vector2(9031, 2922)
+scale = Vector2(2, 2)
+
+[node name="SmartFish2" parent="." instance=ExtResource("4_o6klx")]
+position = Vector2(13612, 5931)
+rotation = -0.570723
 scale = Vector2(3, 3)
+
+[node name="SmartFish3" parent="." instance=ExtResource("4_o6klx")]
+position = Vector2(27306, 1061)
+scale = Vector2(-3, 3)
+
+[node name="SmartFish4" parent="." instance=ExtResource("4_o6klx")]
+position = Vector2(33250, 4858)
+scale = Vector2(2, 2)
+
+[node name="SmartFish5" parent="." instance=ExtResource("4_o6klx")]
+position = Vector2(44780, 1417)
+rotation = -0.200713
+scale = Vector2(3, 3)
+
+[node name="SmartFish6" parent="." instance=ExtResource("4_o6klx")]
+position = Vector2(12391, 1361)
+
+[node name="SmartFish7" parent="." instance=ExtResource("4_o6klx")]
+position = Vector2(19718, 3372)
+scale = Vector2(2, 2)
+
+[node name="SmartFish8" parent="." instance=ExtResource("4_o6klx")]
+position = Vector2(16934, 1163)
+
+[node name="SmartFish9" parent="." instance=ExtResource("4_o6klx")]
+position = Vector2(33457, 1828)
+scale = Vector2(-2, 2)
+
+[node name="SmartFish10" parent="." instance=ExtResource("4_o6klx")]
+position = Vector2(37528, 2639)
+rotation = -0.380482
+scale = Vector2(2, 2)

@@ -21,8 +21,6 @@ func _ready():
 func _physics_process(delta: float) -> void:
 	# dumb water fix
 	if global_position.y > 0 and not in_water:
-		print('Global.y')
-		print(global_position.y)
 		in_water = true
 	
 	# Add the gravity.
