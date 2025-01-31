@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://bttyutts1bnuo" path="res://assets/bubble/bubbleAlpha2.png" id="2_rpnef"]
 [ext_resource type="Script" path="res://addons/softbody2d/softbody2d.gd" id="2_sqj5y"]
 [ext_resource type="Script" path="res://components/player/character_body_2d.gd" id="3_ksp00"]
-[ext_resource type="AudioStream" uid="uid://lypmavm6muv2" path="res://music/triple_mouth_pop.mp3" id="6_t58jd"]
+[ext_resource type="AudioStream" uid="uid://b3rtv7b1ob3e7" path="res://music/single_mouth_pop.mp3" id="6_0kb6m"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ukdvx"]
 shader = ExtResource("1_no5uk")
@@ -330,7 +330,6 @@ metadata/_local_pose_override_enabled_ = true
 [node name="Bone-8" type="Bone2D" parent="SoftBody2D/Skeleton2D"]
 position = Vector2(16, 3)
 rotation = 2.47758
-scale = Vector2(1, 1)
 rest = Transform2D(-0.787525, 0.616283, -0.616283, -0.787525, 16, 3)
 auto_calculate_length_and_angle = false
 length = 8.0
@@ -383,7 +382,6 @@ metadata/_local_pose_override_enabled_ = true
 [node name="Bone-12" type="Bone2D" parent="SoftBody2D/Skeleton2D"]
 position = Vector2(16, 29)
 rotation = -2.47758
-scale = Vector2(1, 1)
 rest = Transform2D(-0.787525, -0.616283, 0.616283, -0.787525, 16, 29)
 auto_calculate_length_and_angle = false
 length = 8.0
@@ -450,7 +448,6 @@ metadata/_local_pose_override_enabled_ = true
 [node name="Bone-17" type="Bone2D" parent="SoftBody2D/Skeleton2D"]
 position = Vector2(23.2657, 29.1251)
 rotation = -0.805855
-scale = Vector2(1, 1)
 rest = Transform2D(0.692495, -0.721423, 0.721423, 0.692495, 23.2657, 29.1251)
 auto_calculate_length_and_angle = false
 length = 8.0
@@ -1721,6 +1718,7 @@ shape = SubResource("CircleShape2D_2lysv")
 debug_color = Color(0.646841, 0.440825, 0.731853, 0.42)
 
 [node name="pop" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("6_t58jd")
+stream = ExtResource("6_0kb6m")
+volume_db = 5.0
 
 [connection signal="body_entered" from="CharacterBody2D/Area2D" to="CharacterBody2D" method="_on_area_2d_body_entered"]
